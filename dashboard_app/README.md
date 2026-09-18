@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 Social Media Insights Dashboard - Hướng dẫn Vận hành
 
 Ứng dụng trực quan hóa dữ liệu mạng xã hội sử dụng Streamlit.
@@ -80,16 +81,20 @@ Sau khi chạy, trình duyệt sẽ tự động mở trang chủ tại địa c
 
 * **Lỗi GPU (MPS):** Nếu chạy trên Mac M1/M2/M3/M4 gặp lỗi liên quan đến thiết bị MPS, ứng dụng đã được cấu hình tự động fallback chạy ổn định trên `CPU` trong `app.py`.
 * **Cài đặt thư viện:** Nếu gặp lỗi thiếu thư viện tokenizer khi chạy mô hình học sâu, hãy chạy lại lệnh cài đặt: `pip install sentencepiece protobuf`.
-
----
-
-# 📚 Tài liệu Dự án (Project Dataset Documentation)
-
+=======
 **TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN - ĐHQG-HCM (UIT)**  
 **Môn học:** DS107 - Tư duy tính toán cho khoa học dữ liệu  
 
 **Đề tài:** PHÂN LOẠI TIN TỨC VÀ PHÂN TÍCH CẢM XÚC CỦA NGƯỜI DÙNG FACEBOOK VIỆT NAM: TIẾP CẬN DỰA TRÊN SIÊU DỮ LIỆU TƯƠNG TÁC  
 **Lĩnh vực:** Khai thác dữ liệu mạng xã hội & Xử lý ngôn ngữ tự nhiên (NLP)  
+
+---
+
+## Công Nghệ Sử Dụng (Tech Stack)
+Dự án được xây dựng trên nền tảng Python với sự kết hợp của các công cụ hiện đại:
+- **Xử lý dữ liệu:** `Pandas`, `NumPy`
+- **Mô hình hóa ngôn ngữ:** `PyTorch`, `PhoBERT` (Pre-trained language model dành riêng cho tiếng Việt)
+- **Giao diện trực quan:** `Streamlit` (Dashboard tương tác thời gian thực)
 
 ---
 
@@ -162,3 +167,4 @@ Dự án áp dụng thuật toán Khớp chuỗi văn bản chính xác (Exact T
 1. Trích xuất văn bản thô từ trường `content` (CSV) và trường `post_content` (JSON).
 2. Xóa bỏ toàn bộ các ký tự ẩn gây nhiễu định dạng (dấu cách thừa, tab, ký tự xuống dòng `\n`, `\r`) và chuyển văn bản về định dạng chữ thường (lowercase) để tạo ra một Khóa nối chuẩn hóa (Normalized Join Key).
 3. Thực hiện thuật toán `Inner Join` dựa trên khóa chuẩn hóa này. Những văn bản vượt qua giới hạn cắt xén của nền tảng (Facebook Truncation) hoặc có sự sai lệch về ký tự mã hóa (Encoding) sẽ bị loại bỏ nhằm đảm bảo tính toàn vẹn tuyệt đối cho 2.077 bản ghi cuối cùng.
+>>>>>>> cc43d2cd3ee338089ca2b0c6a158f8a7bcd95144

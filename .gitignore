@@ -1,30 +1,42 @@
-# 1. Toàn bộ file dữ liệu (Raw & Processed)
-*.csv
-*.json
-*.xlsx
-# Ngoại trừ file data/.gitkeep
-!data/.gitkeep
-
-# 2. Toàn bộ file trọng số mô hình AI (Model Weights)
-*.pt
-*.bin
-*.h5
-
-# 3. Bộ nhớ tạm của Python và Jupyter
+# Python cache
 __pycache__/
-.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
 
-# 4. Môi trường ảo (Virtual Environment)
-venv/
-env/
-.env
+# Local virtual environment
 .venv/
-.venv_modeling/
+venv/
+ENV/
+env/
 
-# 5. Các file cấu hình hệ điều hành
+# OS system files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# 6. Thư mục dữ liệu & mô hình nội bộ
+# Large Deep Learning models (Each is >500MB, exceeding GitHub's 100MB limit)
+dashboard_app/08_Modeling_Results/mbert_best_model_kb4/
+dashboard_app/08_Modeling_Results/phobert_kb4_best_model/
+dashboard_app/08_Modeling_Results/xlmr_best_model_kb5/
+
+# Notebook checkpoint
+.ipynb_checkpoints/
+
+# Exclude data CSV files (already existing elsewhere)
+*.csv
+
+# Exclude notebooks, PDFs, and reports
+*.ipynb
+*.pdf
+Final_Master_Data_Statistics.json
+Final_Master_Data_Technical_Report.md
+social_media_dashboard_analytical_report.md
+
+# Large traditional ML models (RandomForest is 267MB, exceeding GitHub's 100MB limit)
+dashboard_app/08_Modeling_Results/traditional_ml_hpo_deep/model_zoo/best_by_model/RandomForest/model.joblib
 report/
-08_Modeling_Results/
