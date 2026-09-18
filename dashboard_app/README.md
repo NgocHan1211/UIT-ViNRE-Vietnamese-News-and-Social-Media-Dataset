@@ -1,16 +1,95 @@
+# 🚀 Social Media Insights Dashboard - Hướng dẫn Vận hành
+
+Ứng dụng trực quan hóa dữ liệu mạng xã hội sử dụng Streamlit.
+
+---
+
+## 🛠️ Bước 1: Thiết lập môi trường
+
+Đảm bảo máy đã cài đặt **Python 3.8+**.
+
+1. **Tạo môi trường ảo:**
+```bash
+# macOS/Linux
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Windows
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+2. **Di chuyển vào thư mục ứng dụng & cài đặt thư viện:**
+```bash
+cd dashboard_app
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+---
+
+## ⚙️ Bước 2: Chuẩn bị Dữ liệu
+
+Để ứng dụng có dữ liệu hiển thị, hãy đảm bảo các file sau nằm đúng vị trí trong thư mục `dashboard_app/`:
+
+* `Public_Response_Streamlit_Enriched.csv` (File dữ liệu chính đã được làm giàu)
+* `taxonomy_mapping_used.csv` (File cấu hình nhãn chủ đề)
+* Thư mục `08_Modeling_Results/` (Chứa các checkpoint mô hình cho Tab AI Simulator)
+
+*💡 Mẹo: Bồ cũng có thể tự động tái lập (reproduce) tệp dữ liệu đã làm giàu từ tệp thô nguồn bằng cách chạy lệnh `python3 data_loader.py` trong thư mục `dashboard_app/`.*
+
+---
+
+## 📦 Bước 3: Khôi phục Mô hình (Model Recovery)
+
+> **Tại sao cần bước này?**
+> Theo thực hành chuẩn trong ngành ML/DS, mô hình huấn luyện (có thể nặng hàng GB) **không được lưu trữ trên Git** để tránh bloat repository. Nguyên tắc là: *"Code là code, Dữ liệu là dữ liệu."*
+
+Sau khi `git clone`, thư mục `08_Modeling_Results/` sẽ **không có sẵn**. Thực hiện 2 bước sau:
+
+1. **Tải file mô hình:** 👉 [**Nhấn vào đây để tải `08_Modeling_Results.zip`**](https://drive.google.com/file/d/1Gw3I1iL0hmj-O-x0ixeuDCBvuR9bxM7D/view?usp=drive_link)
+
+2. **Giải nén vào thư mục `dashboard_app/`** sao cho cấu trúc là `dashboard_app/08_Modeling_Results/...`
+
+Dashboard sẽ tự động nhận diện các file mô hình tại đây.
+
+---
+
+## ▶️ Bước 4: Khởi chạy Dashboard
+
+Khởi chạy ứng dụng Streamlit bằng lệnh:
+
+```bash
+streamlit run app.py
+```
+
+Sau khi chạy, trình duyệt sẽ tự động mở trang chủ tại địa chỉ cục bộ: **`http://localhost:8501`**
+
+---
+
+## 🔧 Cấu trúc các Tab chức năng
+
+* **🗞️ The Front Page**: Tổng quan thống kê, biểu đồ phân bổ chủ đề và lớp minh chứng kiểm toán dữ liệu động.
+* **🚨 Threat Radar**: Giám sát rủi ro mỉa mai (Amusement Outliers), tranh cãi (Controversy Spike) và các dấu hiệu spam/bias.
+* **📊 Audience Pulse**: Phân tích hành vi tương tác chi tiết và mật độ khung giờ tương tác.
+* **✨ AI Content Simulator**: Lớp tiền xử lý chuẩn hóa teencode và dự báo chủ đề sử dụng đồng thời 7 mô hình máy học (XLM-R, PhoBERT, XGBoost, v.v.).
+
+---
+
+### 💡 Lưu ý khi xử lý lỗi
+
+* **Lỗi GPU (MPS):** Nếu chạy trên Mac M1/M2/M3/M4 gặp lỗi liên quan đến thiết bị MPS, ứng dụng đã được cấu hình tự động fallback chạy ổn định trên `CPU` trong `app.py`.
+* **Cài đặt thư viện:** Nếu gặp lỗi thiếu thư viện tokenizer khi chạy mô hình học sâu, hãy chạy lại lệnh cài đặt: `pip install sentencepiece protobuf`.
+
+---
+
+# 📚 Tài liệu Dự án (Project Dataset Documentation)
+
 **TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN - ĐHQG-HCM (UIT)**  
 **Môn học:** DS107 - Tư duy tính toán cho khoa học dữ liệu  
 
 **Đề tài:** PHÂN LOẠI TIN TỨC VÀ PHÂN TÍCH CẢM XÚC CỦA NGƯỜI DÙNG FACEBOOK VIỆT NAM: TIẾP CẬN DỰA TRÊN SIÊU DỮ LIỆU TƯƠNG TÁC  
 **Lĩnh vực:** Khai thác dữ liệu mạng xã hội & Xử lý ngôn ngữ tự nhiên (NLP)  
-
----
-
-## Công Nghệ Sử Dụng (Tech Stack)
-Dự án được xây dựng trên nền tảng Python với sự kết hợp của các công cụ hiện đại:
-- **Xử lý dữ liệu:** `Pandas`, `NumPy`
-- **Mô hình hóa ngôn ngữ:** `PyTorch`, `PhoBERT` (Pre-trained language model dành riêng cho tiếng Việt)
-- **Giao diện trực quan:** `Streamlit` (Dashboard tương tác thời gian thực)
 
 ---
 

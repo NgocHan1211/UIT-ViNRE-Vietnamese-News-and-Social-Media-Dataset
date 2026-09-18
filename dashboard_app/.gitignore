@@ -1,0 +1,35 @@
+<<<<<<< HEAD
+08_Modeling_Results/
+__pycache__/
+.DS_Store
+*.safetensors
+*.joblib
+=======
+# 1. Toàn bộ file dữ liệu (Raw & Processed)
+*.csv
+*.json
+*.xlsx
+# Ngoại trừ file data/.gitkeep
+!data/.gitkeep
+
+# 2. Toàn bộ file trọng số mô hình AI (Model Weights)
+*.pt
+*.bin
+*.h5
+
+# 3. Bộ nhớ tạm của Python và Jupyter
+__pycache__/
+.ipynb_checkpoints/
+
+# 4. Môi trường ảo (Virtual Environment)
+venv/
+env/
+.env
+.venv/
+
+# 5. Các file cấu hình hệ điều hành
+.DS_Store
+Thumbs.db
+>>>>>>> cc43d2cd3ee338089ca2b0c6a158f8a7bcd95144
+dashboard/08_Modeling_Results/
+data/json-crawl-data/

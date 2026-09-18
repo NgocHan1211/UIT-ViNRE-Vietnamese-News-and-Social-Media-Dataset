@@ -1,0 +1,39 @@
+<<<<<<< HEAD
+# ==========================================
+# 📊 CORE FRAMEWORK & DATA MANIPULATION
+# ==========================================
+streamlit>=1.20.0        # Framework chính để xây dựng giao diện ứng dụng Web/Dashboard tương tác
+pandas>=1.3.0            # Thư viện thao tác, xử lý và phân tích cấu trúc bảng dữ liệu (DataFrames)
+numpy>=1.20.0            # Thư viện tính toán số học, ma trận và các phép biến đổi toán học vector hóa
+
+# ==========================================
+# 📈 DATA VISUALIZATION
+# ==========================================
+plotly>=5.0.0            # Công cụ vẽ biểu đồ tương tác cao (như Heatmap, Bubble chart, Line chart)
+
+# ==========================================
+# 🤖 MACHINE LEARNING & DEEP LEARNING (NLP)
+# ==========================================
+scikit-learn>=1.0.0      # Thư viện máy học truyền thống dùng cho mô hình hóa (TF-IDF Vectorizer, metrics)
+xgboost>=1.5.0           # Mô hình phân loại nâng cao dựa trên giải thuật Extreme Gradient Boosting
+torch>=2.0.0             # Framework Deep Learning nền tảng (CPU/GPU) để chạy các mô hình học sâu Transformer
+transformers>=4.30.0     # Thư viện tải và suy luận mô hình học sâu NLP (PhoBERT, mBERT, XLM-R)
+sentencepiece>=0.1.99    # Bộ Tokenizer phụ thuộc cần thiết cho PhoBERT và XLM-R (SentencePiece)
+protobuf>=3.20.0         # Giao thức tuần tự hóa dữ liệu phục vụ trao đổi thông điệp mô hình mạng nơ-ron
+
+# ==========================================
+# 🛠️ UTILITIES & HELPER PACKAGES
+# ==========================================
+joblib                   # Lưu trữ và tải các mô hình máy học truyền thống đã huấn luyện (.joblib)
+requests                 # Thư viện xử lý các truy vấn HTTP (tải tài nguyên mô hình và API ngoài)
+openpyxl                 # Hỗ trợ đọc/ghi dữ liệu định dạng Excel (.xlsx) phục vụ xuất báo cáo
+python-dotenv            # Quản lý các biến môi trường và cấu hình bảo mật cục bộ (.env)
+=======
+pandas==2.2.3
+jupyter==1.1.1
+matplotlib==3.9.4
+seaborn==0.13.2
+ipykernel==6.29.5
+numpy==1.26.4
+playwright==1.43.0
+>>>>>>> cc43d2cd3ee338089ca2b0c6a158f8a7bcd95144
