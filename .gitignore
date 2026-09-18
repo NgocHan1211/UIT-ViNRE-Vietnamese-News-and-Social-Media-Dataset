@@ -24,7 +24,3 @@ env/
 # 5. Các file cấu hình hệ điều hành
 .DS_Store
 Thumbs.db
-
-# 6. Thư mục dữ liệu & mô hình nội bộ
-report/
-08_Modeling_Results/

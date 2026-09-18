@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# OS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Large Deep Learning models (Each is >500MB, exceeding GitHub's 100MB limit)
+08_Modeling_Results/mbert_best_model_kb4/
+08_Modeling_Results/phobert_kb4_best_model/
+08_Modeling_Results/xlmr_best_model_kb5/
+
+# Notebook checkpoint
+.ipynb_checkpoints/
+
+# Exclude data CSV files (already existing elsewhere)
+*.csv
+
+# Exclude notebooks, PDFs, and reports
+*.ipynb
+*.pdf
+Final_Master_Data_Statistics.json
+Final_Master_Data_Technical_Report.md
+social_media_dashboard_analytical_report.md
+
+# Large traditional ML models (RandomForest is 267MB, exceeding GitHub's 100MB limit)
+08_Modeling_Results/traditional_ml_hpo_deep/model_zoo/best_by_model/RandomForest/model.joblib
