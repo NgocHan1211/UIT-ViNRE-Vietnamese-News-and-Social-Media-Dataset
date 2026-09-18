@@ -1,0 +1,29 @@
+{
+  "post_id": "sample_post_001",
+  "source": "yannews",
+  "url": "https://www.facebook.com/sample/posts/sample_post_001",
+  "crawl_time": "2025-06-14T00:00:00+07:00",
+  "created_time": "2025-06-13T21:30:00+07:00",
+  "text": "Sample post text for schema demonstration.",
+  "reactions": {
+    "total": 123,
+    "detail": {
+      "like": 90,
+      "haha": 20,
+      "love": 13
+    }
+  },
+  "comments": [
+    {
+      "text": "Sample comment text.",
+      "reactions": {
+        "total": 2,
+        "detail": {
+          "like": 2
+        }
+      }
+    }
+  ],
+  "shares": 10,
+  "notes": "Sanitized example only. No cookie, browser profile, login token, or raw expansion token is included."
+}

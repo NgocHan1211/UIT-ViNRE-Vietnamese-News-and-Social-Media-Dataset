@@ -1,0 +1,58 @@
+{
+  "selection_metric": "validation_macro_f1",
+  "tie_breakers": [
+    "validation_weighted_f1",
+    "validation_accuracy",
+    "model_simplicity_if_macro_f1_within_0.003"
+  ],
+  "best_scenario": "01_Raw_Data",
+  "best_model_name": "LogisticRegression",
+  "best_trial_id": 29,
+  "best_tfidf_params": {
+    "analyzer": "word",
+    "max_features": 50000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 1,
+    "max_df": 0.95,
+    "sublinear_tf": true
+  },
+  "best_model_params": {
+    "C": 10.0,
+    "solver": "lbfgs"
+  },
+  "best_effective_model_params": {
+    "C": 10.0,
+    "solver": "lbfgs"
+  },
+  "validation_metrics": {
+    "accuracy": 0.7252090800477897,
+    "macro_precision": 0.6825892795969285,
+    "macro_recall": 0.6454628248530964,
+    "macro_f1": 0.6492228034107059,
+    "weighted_precision": 0.7356969521303393,
+    "weighted_recall": 0.7252090800477897,
+    "weighted_f1": 0.7244159299705369,
+    "micro_precision": 0.7252090800477897,
+    "micro_recall": 0.7252090800477897,
+    "micro_f1": 0.7252090800477897
+  },
+  "test_metrics": {
+    "accuracy": 0.7601431980906921,
+    "macro_precision": 0.7060537477857691,
+    "macro_recall": 0.6978626797137023,
+    "macro_f1": 0.6953520112626581,
+    "weighted_precision": 0.7609479862908224,
+    "weighted_recall": 0.7601431980906921,
+    "weighted_f1": 0.7577944724045558,
+    "micro_precision": 0.7601431980906921,
+    "micro_recall": 0.7601431980906921,
+    "micro_f1": 0.7601431980906921
+  },
+  "model_path": "data/08_Modeling_Results/traditional_ml_hpo_deep/01_Raw_Data/LogisticRegression/model.joblib",
+  "vectorizer_path": "data/08_Modeling_Results/traditional_ml_hpo_deep/01_Raw_Data/LogisticRegression/vectorizer.joblib",
+  "label_encoder_path": "data/08_Modeling_Results/traditional_ml_hpo_deep/01_Raw_Data/LogisticRegression/label_encoder.joblib",
+  "created_at": "2026-06-12T22:02:05"
+}

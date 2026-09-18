@@ -1,0 +1,4 @@
+model_name,scenario,total_samples,wrong_predictions,error_rate
+PhoBERT,04_Full_Clean_KB4,838,176,0.21
+mBERT,04_Full_Clean_KB4,838,185,0.2208
+XLM-RoBERTa,05_Balanced_KB5,838,174,0.2076

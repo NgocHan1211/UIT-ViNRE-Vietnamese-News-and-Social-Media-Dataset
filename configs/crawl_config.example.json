@@ -1,0 +1,42 @@
+{
+  "chrome": {
+    "remote_debugging_url": "http://127.0.0.1:9222",
+    "profile_dir_example": "~/chrome-cdp-fb"
+  },
+  "crawl": {
+    "owner": "phuc",
+    "min_reactions": 50,
+    "target_posts_per_page": 1000,
+    "session_post_limit": 80,
+    "rest_seconds_between_cycles": 480,
+    "output_root": "data/raw/facebook",
+    "log_root": "logs/crawl"
+  },
+  "pages": [
+    {
+      "page_name": "YAN News",
+      "page_url": "https://www.facebook.com/yannews",
+      "output_file": "posts_YAN_News.json"
+    },
+    {
+      "page_name": "VnExpress.net",
+      "page_url": "https://www.facebook.com/congdongvnexpress",
+      "output_file": "posts_VnExpress_net.json"
+    },
+    {
+      "page_name": "Dantri",
+      "page_url": "https://www.facebook.com/baodantridientu",
+      "output_file": "posts_Dantri.json"
+    },
+    {
+      "page_name": "Tin tuc VTV24",
+      "page_url": "https://www.facebook.com/tintucvtv24",
+      "output_file": "posts_Tin_tuc_VTV24.json"
+    }
+  ],
+  "notes": [
+    "This is a public example config only.",
+    "Do not put real cookies, tokens, passwords, or private browser profile files in this repository.",
+    "The crawler uses a locally opened Chrome remote debugging session after the user logs in manually."
+  ]
+}

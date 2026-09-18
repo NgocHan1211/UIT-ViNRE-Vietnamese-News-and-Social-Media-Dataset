@@ -1,0 +1,14 @@
+{
+  "model_name": "LogisticRegression",
+  "scenario": "01_Raw_Data",
+  "selection_rule": "Scenario/model artifact from final deep HPO benchmark",
+  "validation_macro_f1": 0.6492228034107059,
+  "validation_accuracy": 0.7252090800477897,
+  "test_macro_f1": 0.6953520112626581,
+  "test_accuracy": 0.7601431980906921,
+  "supports_predict_proba": true,
+  "source_artifact_dir": "data/08_Modeling_Results/traditional_ml_hpo_deep/01_Raw_Data/LogisticRegression",
+  "artifact_reference_mode": "symlink",
+  "notes": "Test metrics are reported only for final evaluation; model selection used validation Macro-F1.",
+  "created_at": "2026-06-12T23:09:34"
+}

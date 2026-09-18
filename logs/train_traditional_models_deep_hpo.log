@@ -1,0 +1,985 @@
+2026-06-12 18:08:17,742 | INFO | [SCENARIO FOUND] 01_Raw_Data
+2026-06-12 18:08:17,743 | INFO |   train = data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_train.csv
+2026-06-12 18:08:17,743 | INFO |   val   = data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_val.csv
+2026-06-12 18:08:17,743 | INFO |   test  = data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_test.csv
+2026-06-12 18:08:17,743 | INFO | [SCENARIO FOUND] 02_Basic_Clean
+2026-06-12 18:08:17,743 | INFO |   train = data/07_Cleaned_Data/02_Basic_Clean/02_Basic_Clean/kb2_train.csv
+2026-06-12 18:08:17,743 | INFO |   val   = data/07_Cleaned_Data/02_Basic_Clean/02_Basic_Clean/kb2_val.csv
+2026-06-12 18:08:17,743 | INFO |   test  = data/07_Cleaned_Data/02_Basic_Clean/02_Basic_Clean/kb2_test.csv
+2026-06-12 18:08:17,743 | INFO | [SCENARIO FOUND] 03_Full_Clean
+2026-06-12 18:08:17,743 | INFO |   train = data/07_Cleaned_Data/03_Full_Clean/03_Full_Clean/kb3_train.csv
+2026-06-12 18:08:17,744 | INFO |   val   = data/07_Cleaned_Data/03_Full_Clean/03_Full_Clean/kb3_val.csv
+2026-06-12 18:08:17,744 | INFO |   test  = data/07_Cleaned_Data/03_Full_Clean/03_Full_Clean/kb3_test.csv
+2026-06-12 18:08:17,744 | INFO | [SCENARIO FOUND] 04_No_Stopwords
+2026-06-12 18:08:17,744 | INFO |   train = data/07_Cleaned_Data/04_No_Stopwords/04_No_Stopwords/kb4_train.csv
+2026-06-12 18:08:17,744 | INFO |   val   = data/07_Cleaned_Data/04_No_Stopwords/04_No_Stopwords/kb4_val.csv
+2026-06-12 18:08:17,744 | INFO |   test  = data/07_Cleaned_Data/04_No_Stopwords/04_No_Stopwords/kb4_test.csv
+2026-06-12 18:08:17,744 | INFO | [SCENARIO FOUND] 05_Balanced
+2026-06-12 18:08:17,744 | INFO |   train = data/07_Cleaned_Data/05_Balanced/05_Balanced/kb5_train.csv
+2026-06-12 18:08:17,744 | INFO |   val   = data/07_Cleaned_Data/05_Balanced/05_Balanced/kb5_val.csv
+2026-06-12 18:08:17,744 | INFO |   test  = data/07_Cleaned_Data/05_Balanced/05_Balanced/kb5_test.csv
+2026-06-12 18:08:17,745 | INFO | Starting DS107 traditional ML training
+2026-06-12 18:08:17,745 | INFO | data_dir=data/07_Cleaned_Data
+2026-06-12 18:08:17,745 | INFO | output_dir=data/08_Modeling_Results/traditional_ml_hpo_deep
+2026-06-12 18:08:17,746 | INFO | scenarios=['01_Raw_Data', '02_Basic_Clean', '03_Full_Clean', '04_No_Stopwords', '05_Balanced']
+2026-06-12 18:08:17,746 | INFO | models=['LogisticRegression', 'RandomForest', 'XGBoost', 'LinearSVC']
+2026-06-12 18:08:17,746 | INFO | tuning_mode=deep
+2026-06-12 18:08:17,929 | INFO | [TEXT COLUMN] Scenario=01_Raw_Data uses text_column=post_content_for_labeling
+2026-06-12 18:08:18,118 | INFO | [TEXT COLUMN] Scenario=02_Basic_Clean uses text_column=post_content_for_labeling
+2026-06-12 18:08:18,303 | INFO | [TEXT COLUMN] Scenario=03_Full_Clean uses text_column=post_content_for_labeling
+2026-06-12 18:08:18,487 | INFO | [TEXT COLUMN] Scenario=04_No_Stopwords uses text_column=post_content_for_labeling
+2026-06-12 18:08:18,920 | INFO | [TEXT COLUMN] Scenario=05_Balanced uses text_column=post_content_for_labeling
+2026-06-12 18:08:21,882 | INFO | [START] Scenario=01_Raw_Data | Model=LogisticRegression
+2026-06-12 18:08:21,883 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 18:08:21,886 | INFO | [HPO-DEEP] Model=LogisticRegression | Total candidate configs=130 | Sampled trials=40
+2026-06-12 18:08:21,886 | INFO | [HPO-DEEP] Scenario=01_Raw_Data | Model=LogisticRegression | Total candidate configs=130 | Sampled trials=40
+2026-06-12 18:08:21,886 | INFO | [HPO] Scenario=01_Raw_Data | Model=LogisticRegression | Trials=40
+2026-06-12 18:08:21,886 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=1/40
+2026-06-12 18:08:26,956 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=2/40
+2026-06-12 18:08:30,410 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=3/40
+2026-06-12 18:08:35,822 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=4/40
+2026-06-12 18:08:37,438 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=5/40
+2026-06-12 18:08:38,796 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=6/40
+2026-06-12 18:08:44,133 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=7/40
+2026-06-12 18:08:46,058 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=8/40
+2026-06-12 18:08:48,980 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=9/40
+2026-06-12 18:08:49,760 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=10/40
+2026-06-12 18:08:53,526 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=11/40
+2026-06-12 18:08:58,540 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=12/40
+2026-06-12 18:09:00,654 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=13/40
+2026-06-12 18:09:01,478 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=14/40
+2026-06-12 18:09:02,297 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=15/40
+2026-06-12 18:09:05,261 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=16/40
+2026-06-12 18:09:09,927 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=17/40
+2026-06-12 18:09:11,103 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=18/40
+2026-06-12 18:09:15,759 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=19/40
+2026-06-12 18:09:18,719 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=20/40
+2026-06-12 18:09:25,266 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=21/40
+2026-06-12 18:09:27,124 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=22/40
+2026-06-12 18:09:32,345 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=23/40
+2026-06-12 18:09:38,589 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=24/40
+2026-06-12 18:09:47,637 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=25/40
+2026-06-12 18:09:49,012 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=26/40
+2026-06-12 18:09:50,669 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=27/40
+2026-06-12 18:10:00,104 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=28/40
+2026-06-12 18:10:08,357 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=29/40
+2026-06-12 18:10:15,293 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=30/40
+2026-06-12 18:11:00,879 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:11:01,349 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=31/40
+2026-06-12 18:11:40,241 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:11:40,695 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=32/40
+2026-06-12 18:12:59,981 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:13:02,388 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=33/40
+2026-06-12 18:14:24,624 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:14:26,461 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=34/40
+2026-06-12 18:15:53,511 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:15:55,391 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=35/40
+2026-06-12 18:16:31,218 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:16:32,922 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=36/40
+2026-06-12 18:17:08,689 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:17:10,084 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=37/40
+2026-06-12 18:18:24,787 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:18:28,248 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=38/40
+2026-06-12 18:19:48,968 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:19:53,214 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=39/40
+2026-06-12 18:24:46,472 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:24:50,187 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=40/40
+2026-06-12 18:28:15,762 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:28:19,961 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 18:28:27,763 | INFO | [TRAIN DONE] train_time=5.30
+2026-06-12 18:28:27,764 | INFO | [VAL] acc=0.7252, macro_precision=0.6826, macro_recall=0.6455, macro_f1=0.6492
+2026-06-12 18:28:27,764 | INFO | [TEST] acc=0.7601, macro_precision=0.7061, macro_recall=0.6979, macro_f1=0.6954
+2026-06-12 18:28:27,764 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/01_Raw_Data/LogisticRegression
+2026-06-12 18:28:27,764 | INFO | [START] Scenario=01_Raw_Data | Model=RandomForest
+2026-06-12 18:28:27,764 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 18:28:27,765 | INFO | [HPO-DEEP] Model=RandomForest | Total candidate configs=70 | Sampled trials=18
+2026-06-12 18:28:27,765 | INFO | [HPO-DEEP] Scenario=01_Raw_Data | Model=RandomForest | Total candidate configs=70 | Sampled trials=18
+2026-06-12 18:28:27,765 | INFO | [HPO] Scenario=01_Raw_Data | Model=RandomForest | Trials=18
+2026-06-12 18:28:27,765 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=1/18
+2026-06-12 18:28:29,682 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=2/18
+2026-06-12 18:28:31,518 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=3/18
+2026-06-12 18:28:33,379 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=4/18
+2026-06-12 18:28:34,823 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=5/18
+2026-06-12 18:28:38,929 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=6/18
+2026-06-12 18:28:39,751 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=7/18
+2026-06-12 18:28:40,975 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=8/18
+2026-06-12 18:28:42,216 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=9/18
+2026-06-12 18:28:43,438 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=10/18
+2026-06-12 18:28:46,006 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=11/18
+2026-06-12 18:28:48,090 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=12/18
+2026-06-12 18:28:49,779 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=13/18
+2026-06-12 18:28:50,656 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=14/18
+2026-06-12 18:28:51,544 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=15/18
+2026-06-12 18:28:52,820 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=16/18
+2026-06-12 18:28:54,088 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=17/18
+2026-06-12 18:28:54,986 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=18/18
+2026-06-12 18:28:56,058 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 18:29:00,757 | INFO | [TRAIN DONE] train_time=2.52
+2026-06-12 18:29:00,759 | INFO | [VAL] acc=0.6440, macro_precision=0.7048, macro_recall=0.5508, macro_f1=0.5698
+2026-06-12 18:29:00,759 | INFO | [TEST] acc=0.6766, macro_precision=0.6625, macro_recall=0.5682, macro_f1=0.5860
+2026-06-12 18:29:00,759 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/01_Raw_Data/RandomForest
+2026-06-12 18:29:00,759 | INFO | [START] Scenario=01_Raw_Data | Model=XGBoost
+2026-06-12 18:29:00,759 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 18:29:00,759 | INFO | [HPO-DEEP] Model=XGBoost | Total candidate configs=70 | Sampled trials=18
+2026-06-12 18:29:00,759 | INFO | [HPO-DEEP] Scenario=01_Raw_Data | Model=XGBoost | Total candidate configs=70 | Sampled trials=18
+2026-06-12 18:29:00,759 | INFO | [HPO] Scenario=01_Raw_Data | Model=XGBoost | Trials=18
+2026-06-12 18:29:00,759 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=1/18
+2026-06-12 18:29:21,599 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=2/18
+2026-06-12 18:29:46,384 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=3/18
+2026-06-12 18:30:13,673 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=4/18
+2026-06-12 18:30:42,224 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=5/18
+2026-06-12 18:32:00,706 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=6/18
+2026-06-12 18:32:33,673 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=7/18
+2026-06-12 18:33:42,066 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=8/18
+2026-06-12 18:34:50,709 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=9/18
+2026-06-12 18:35:38,879 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=10/18
+2026-06-12 18:37:28,837 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=11/18
+2026-06-12 18:39:13,191 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=12/18
+2026-06-12 18:40:37,777 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=13/18
+2026-06-12 18:41:24,005 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=14/18
+2026-06-12 18:42:07,614 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=15/18
+2026-06-12 18:43:37,322 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=16/18
+2026-06-12 18:44:51,444 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=17/18
+2026-06-12 18:45:57,960 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=18/18
+2026-06-12 18:47:04,480 | INFO | [VECTORIZER] max_features=70000, ngram_range=(1, 2)
+2026-06-12 18:47:05,405 | ERROR | [EXPERIMENT FAILED] Scenario=01_Raw_Data | Model=XGBoost | error=Must have at least 1 validation dataset for early stopping.
+Traceback (most recent call last):
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 2851, in run_training
+    result = train_final_experiment(
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 1438, in train_final_experiment
+    model, used_model_params, model_notes, fit_info = fit_model(
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 1029, in fit_model
+    model.fit(x_train, y_train_encoded, **fit_kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/training.py", line 182, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 261, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 261, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 446, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+2026-06-12 18:47:05,423 | INFO | [START] Scenario=01_Raw_Data | Model=LinearSVC
+2026-06-12 18:47:05,424 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 18:47:05,424 | INFO | [HPO-DEEP] Model=LinearSVC | Total candidate configs=143 | Sampled trials=45
+2026-06-12 18:47:05,424 | INFO | [HPO-DEEP] Scenario=01_Raw_Data | Model=LinearSVC | Total candidate configs=143 | Sampled trials=45
+2026-06-12 18:47:05,424 | INFO | [HPO] Scenario=01_Raw_Data | Model=LinearSVC | Trials=45
+2026-06-12 18:47:05,424 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=1/45
+2026-06-12 18:47:06,062 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=2/45
+2026-06-12 18:47:06,617 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=3/45
+2026-06-12 18:47:08,404 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=4/45
+2026-06-12 18:47:09,521 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=5/45
+2026-06-12 18:47:09,837 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=6/45
+2026-06-12 18:47:10,402 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=7/45
+2026-06-12 18:47:10,945 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=8/45
+2026-06-12 18:47:11,268 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=9/45
+2026-06-12 18:47:13,321 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=10/45
+2026-06-12 18:47:13,983 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=11/45
+2026-06-12 18:47:15,641 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=12/45
+2026-06-12 18:47:15,975 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=13/45
+2026-06-12 18:47:16,568 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=14/45
+2026-06-12 18:47:17,196 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=15/45
+2026-06-12 18:47:17,858 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=16/45
+2026-06-12 18:47:18,990 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=17/45
+2026-06-12 18:47:19,338 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=18/45
+2026-06-12 18:47:19,968 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=19/45
+2026-06-12 18:47:20,638 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=20/45
+2026-06-12 18:47:21,950 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=21/45
+2026-06-12 18:47:22,317 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=22/45
+2026-06-12 18:47:22,683 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=23/45
+2026-06-12 18:47:23,949 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=24/45
+2026-06-12 18:47:24,633 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=25/45
+2026-06-12 18:47:26,814 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=26/45
+2026-06-12 18:47:27,769 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=27/45
+2026-06-12 18:47:29,306 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=28/45
+2026-06-12 18:47:32,033 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=29/45
+2026-06-12 18:47:33,939 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=30/45
+2026-06-12 18:47:34,445 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=31/45
+2026-06-12 18:47:34,947 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=32/45
+2026-06-12 18:47:36,184 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=33/45
+2026-06-12 18:47:37,286 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=34/45
+2026-06-12 18:47:40,705 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=35/45
+2026-06-12 18:47:41,044 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=36/45
+2026-06-12 18:47:41,383 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=37/45
+2026-06-12 18:47:41,993 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=38/45
+2026-06-12 18:47:42,357 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=39/45
+2026-06-12 18:47:42,718 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=40/45
+2026-06-12 18:47:43,080 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=41/45
+2026-06-12 18:47:43,800 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=42/45
+2026-06-12 18:47:44,531 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=43/45
+2026-06-12 18:47:46,508 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=44/45
+2026-06-12 18:47:48,540 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=45/45
+2026-06-12 18:47:50,007 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 18:47:52,473 | INFO | [TRAIN DONE] train_time=0.78
+2026-06-12 18:47:52,473 | INFO | [VAL] acc=0.7300, macro_precision=0.7039, macro_recall=0.6294, macro_f1=0.6455
+2026-06-12 18:47:52,473 | INFO | [TEST] acc=0.7589, macro_precision=0.7201, macro_recall=0.6745, macro_f1=0.6867
+2026-06-12 18:47:52,473 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/01_Raw_Data/LinearSVC
+2026-06-12 18:47:52,474 | INFO | [START] Scenario=02_Basic_Clean | Model=LogisticRegression
+2026-06-12 18:47:52,474 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 18:47:52,474 | INFO | [HPO-DEEP] Model=LogisticRegression | Total candidate configs=130 | Sampled trials=40
+2026-06-12 18:47:52,474 | INFO | [HPO-DEEP] Scenario=02_Basic_Clean | Model=LogisticRegression | Total candidate configs=130 | Sampled trials=40
+2026-06-12 18:47:52,475 | INFO | [HPO] Scenario=02_Basic_Clean | Model=LogisticRegression | Trials=40
+2026-06-12 18:47:52,475 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=1/40
+2026-06-12 18:47:55,004 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=2/40
+2026-06-12 18:47:56,638 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=3/40
+2026-06-12 18:47:59,070 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=4/40
+2026-06-12 18:48:00,209 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=5/40
+2026-06-12 18:48:01,907 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=6/40
+2026-06-12 18:48:04,602 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=7/40
+2026-06-12 18:48:05,112 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=8/40
+2026-06-12 18:48:06,270 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=9/40
+2026-06-12 18:48:06,823 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=10/40
+2026-06-12 18:48:08,737 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=11/40
+2026-06-12 18:48:12,098 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=12/40
+2026-06-12 18:48:13,414 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=13/40
+2026-06-12 18:48:14,111 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=14/40
+2026-06-12 18:48:14,862 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=15/40
+2026-06-12 18:48:16,958 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=16/40
+2026-06-12 18:48:20,564 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=17/40
+2026-06-12 18:48:21,212 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=18/40
+2026-06-12 18:48:23,906 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=19/40
+2026-06-12 18:48:25,956 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=20/40
+2026-06-12 18:48:29,673 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=21/40
+2026-06-12 18:48:30,496 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=22/40
+2026-06-12 18:48:32,869 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=23/40
+2026-06-12 18:48:36,144 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=24/40
+2026-06-12 18:48:41,538 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=25/40
+2026-06-12 18:48:42,382 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=26/40
+2026-06-12 18:48:43,228 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=27/40
+2026-06-12 18:48:47,414 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=28/40
+2026-06-12 18:48:51,614 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=29/40
+2026-06-12 18:48:56,494 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=30/40
+2026-06-12 18:49:31,898 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:49:32,354 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=31/40
+2026-06-12 18:50:07,839 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:50:08,293 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=32/40
+2026-06-12 18:51:22,693 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:51:24,429 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=33/40
+2026-06-12 18:52:38,352 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:52:40,109 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=34/40
+2026-06-12 18:54:07,143 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:54:09,023 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=35/40
+2026-06-12 18:54:44,272 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:54:44,798 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=36/40
+2026-06-12 18:55:20,500 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:55:22,062 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=37/40
+2026-06-12 18:56:37,203 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:56:40,333 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=38/40
+2026-06-12 18:57:59,410 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 18:58:03,376 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=39/40
+2026-06-12 19:02:45,800 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:02:48,514 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=40/40
+2026-06-12 19:06:03,207 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:06:07,185 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 19:06:14,352 | INFO | [TRAIN DONE] train_time=5.18
+2026-06-12 19:06:14,353 | INFO | [VAL] acc=0.7192, macro_precision=0.6666, macro_recall=0.6380, macro_f1=0.6391
+2026-06-12 19:06:14,353 | INFO | [TEST] acc=0.7613, macro_precision=0.7095, macro_recall=0.7033, macro_f1=0.7014
+2026-06-12 19:06:14,353 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/02_Basic_Clean/LogisticRegression
+2026-06-12 19:06:14,353 | INFO | [START] Scenario=02_Basic_Clean | Model=RandomForest
+2026-06-12 19:06:14,353 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 19:06:14,354 | INFO | [HPO-DEEP] Model=RandomForest | Total candidate configs=70 | Sampled trials=18
+2026-06-12 19:06:14,354 | INFO | [HPO-DEEP] Scenario=02_Basic_Clean | Model=RandomForest | Total candidate configs=70 | Sampled trials=18
+2026-06-12 19:06:14,354 | INFO | [HPO] Scenario=02_Basic_Clean | Model=RandomForest | Trials=18
+2026-06-12 19:06:14,355 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=1/18
+2026-06-12 19:06:16,050 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=2/18
+2026-06-12 19:06:17,848 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=3/18
+2026-06-12 19:06:19,784 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=4/18
+2026-06-12 19:06:21,389 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=5/18
+2026-06-12 19:06:25,581 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=6/18
+2026-06-12 19:06:26,395 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=7/18
+2026-06-12 19:06:27,664 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=8/18
+2026-06-12 19:06:29,013 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=9/18
+2026-06-12 19:06:30,396 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=10/18
+2026-06-12 19:06:33,031 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=11/18
+2026-06-12 19:06:35,298 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=12/18
+2026-06-12 19:06:37,056 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=13/18
+2026-06-12 19:06:37,960 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=14/18
+2026-06-12 19:06:38,856 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=15/18
+2026-06-12 19:06:40,096 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=16/18
+2026-06-12 19:06:41,334 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=17/18
+2026-06-12 19:06:42,299 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=18/18
+2026-06-12 19:06:43,224 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 19:06:46,933 | INFO | [TRAIN DONE] train_time=1.67
+2026-06-12 19:06:46,933 | INFO | [VAL] acc=0.6141, macro_precision=0.5695, macro_recall=0.5969, macro_f1=0.5600
+2026-06-12 19:06:46,933 | INFO | [TEST] acc=0.6718, macro_precision=0.6068, macro_recall=0.6596, macro_f1=0.6142
+2026-06-12 19:06:46,933 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/02_Basic_Clean/RandomForest
+2026-06-12 19:06:46,933 | INFO | [START] Scenario=02_Basic_Clean | Model=XGBoost
+2026-06-12 19:06:46,933 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 19:06:46,935 | INFO | [HPO-DEEP] Model=XGBoost | Total candidate configs=70 | Sampled trials=18
+2026-06-12 19:06:46,935 | INFO | [HPO-DEEP] Scenario=02_Basic_Clean | Model=XGBoost | Total candidate configs=70 | Sampled trials=18
+2026-06-12 19:06:46,935 | INFO | [HPO] Scenario=02_Basic_Clean | Model=XGBoost | Trials=18
+2026-06-12 19:06:46,935 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=1/18
+2026-06-12 19:07:09,879 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=2/18
+2026-06-12 19:07:35,108 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=3/18
+2026-06-12 19:08:03,693 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=4/18
+2026-06-12 19:08:25,584 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=5/18
+2026-06-12 19:09:30,948 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=6/18
+2026-06-12 19:09:59,335 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=7/18
+2026-06-12 19:11:03,731 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=8/18
+2026-06-12 19:12:09,823 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=9/18
+2026-06-12 19:12:52,497 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=10/18
+2026-06-12 19:14:39,805 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=11/18
+2026-06-12 19:16:19,581 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=12/18
+2026-06-12 19:17:42,460 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=13/18
+2026-06-12 19:18:24,015 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=14/18
+2026-06-12 19:19:05,204 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=15/18
+2026-06-12 19:20:31,620 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=16/18
+2026-06-12 19:21:45,060 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=17/18
+2026-06-12 19:22:47,775 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=18/18
+2026-06-12 19:23:51,027 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 19:23:51,833 | ERROR | [EXPERIMENT FAILED] Scenario=02_Basic_Clean | Model=XGBoost | error=Must have at least 1 validation dataset for early stopping.
+Traceback (most recent call last):
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 2851, in run_training
+    result = train_final_experiment(
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 1438, in train_final_experiment
+    model, used_model_params, model_notes, fit_info = fit_model(
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 1029, in fit_model
+    model.fit(x_train, y_train_encoded, **fit_kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/training.py", line 182, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 261, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 261, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 446, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+2026-06-12 19:23:51,835 | INFO | [START] Scenario=02_Basic_Clean | Model=LinearSVC
+2026-06-12 19:23:51,835 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 19:23:51,839 | INFO | [HPO-DEEP] Model=LinearSVC | Total candidate configs=143 | Sampled trials=45
+2026-06-12 19:23:51,839 | INFO | [HPO-DEEP] Scenario=02_Basic_Clean | Model=LinearSVC | Total candidate configs=143 | Sampled trials=45
+2026-06-12 19:23:51,839 | INFO | [HPO] Scenario=02_Basic_Clean | Model=LinearSVC | Trials=45
+2026-06-12 19:23:51,839 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=1/45
+2026-06-12 19:23:52,477 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=2/45
+2026-06-12 19:23:53,040 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=3/45
+2026-06-12 19:23:54,754 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=4/45
+2026-06-12 19:23:55,820 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=5/45
+2026-06-12 19:23:56,136 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=6/45
+2026-06-12 19:23:56,695 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=7/45
+2026-06-12 19:23:57,233 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=8/45
+2026-06-12 19:23:57,548 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=9/45
+2026-06-12 19:23:59,436 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=10/45
+2026-06-12 19:24:00,165 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=11/45
+2026-06-12 19:24:01,918 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=12/45
+2026-06-12 19:24:02,318 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=13/45
+2026-06-12 19:24:02,936 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=14/45
+2026-06-12 19:24:03,544 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=15/45
+2026-06-12 19:24:04,221 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=16/45
+2026-06-12 19:24:05,334 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=17/45
+2026-06-12 19:24:05,676 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=18/45
+2026-06-12 19:24:06,302 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=19/45
+2026-06-12 19:24:07,048 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=20/45
+2026-06-12 19:24:08,331 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=21/45
+2026-06-12 19:24:08,732 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=22/45
+2026-06-12 19:24:09,101 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=23/45
+2026-06-12 19:24:10,401 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=24/45
+2026-06-12 19:24:11,123 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=25/45
+2026-06-12 19:24:13,297 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=26/45
+2026-06-12 19:24:14,319 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=27/45
+2026-06-12 19:24:15,917 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=28/45
+2026-06-12 19:24:18,722 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=29/45
+2026-06-12 19:24:20,649 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=30/45
+2026-06-12 19:24:21,166 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=31/45
+2026-06-12 19:24:21,683 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=32/45
+2026-06-12 19:24:23,135 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=33/45
+2026-06-12 19:24:24,348 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=34/45
+2026-06-12 19:24:28,114 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=35/45
+2026-06-12 19:24:28,452 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=36/45
+2026-06-12 19:24:28,788 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=37/45
+2026-06-12 19:24:29,393 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=38/45
+2026-06-12 19:24:29,752 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=39/45
+2026-06-12 19:24:30,118 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=40/45
+2026-06-12 19:24:30,474 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=41/45
+2026-06-12 19:24:31,197 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=42/45
+2026-06-12 19:24:31,940 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=43/45
+2026-06-12 19:24:33,874 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=44/45
+2026-06-12 19:24:35,841 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=45/45
+2026-06-12 19:24:37,219 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 19:24:39,640 | INFO | [TRAIN DONE] train_time=0.76
+2026-06-12 19:24:39,645 | INFO | [VAL] acc=0.7312, macro_precision=0.7074, macro_recall=0.6311, macro_f1=0.6453
+2026-06-12 19:24:39,645 | INFO | [TEST] acc=0.7578, macro_precision=0.7278, macro_recall=0.6800, macro_f1=0.6938
+2026-06-12 19:24:39,645 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/02_Basic_Clean/LinearSVC
+2026-06-12 19:24:39,646 | INFO | [START] Scenario=03_Full_Clean | Model=LogisticRegression
+2026-06-12 19:24:39,646 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 19:24:39,646 | INFO | [HPO-DEEP] Model=LogisticRegression | Total candidate configs=130 | Sampled trials=40
+2026-06-12 19:24:39,646 | INFO | [HPO-DEEP] Scenario=03_Full_Clean | Model=LogisticRegression | Total candidate configs=130 | Sampled trials=40
+2026-06-12 19:24:39,646 | INFO | [HPO] Scenario=03_Full_Clean | Model=LogisticRegression | Trials=40
+2026-06-12 19:24:39,646 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=1/40
+2026-06-12 19:24:42,200 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=2/40
+2026-06-12 19:24:43,763 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=3/40
+2026-06-12 19:24:46,122 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=4/40
+2026-06-12 19:24:47,496 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=5/40
+2026-06-12 19:24:49,232 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=6/40
+2026-06-12 19:24:52,044 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=7/40
+2026-06-12 19:24:53,244 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=8/40
+2026-06-12 19:24:54,541 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=9/40
+2026-06-12 19:24:55,115 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=10/40
+2026-06-12 19:24:57,423 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=11/40
+2026-06-12 19:25:00,185 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=12/40
+2026-06-12 19:25:00,709 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=13/40
+2026-06-12 19:25:01,247 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=14/40
+2026-06-12 19:25:02,557 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=15/40
+2026-06-12 19:25:04,870 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=16/40
+2026-06-12 19:25:07,498 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=17/40
+2026-06-12 19:25:08,150 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=18/40
+2026-06-12 19:25:10,436 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=19/40
+2026-06-12 19:25:12,311 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=20/40
+2026-06-12 19:25:16,321 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=21/40
+2026-06-12 19:25:17,097 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=22/40
+2026-06-12 19:25:19,603 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=23/40
+2026-06-12 19:25:23,355 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=24/40
+2026-06-12 19:25:28,658 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=25/40
+2026-06-12 19:25:29,579 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=26/40
+2026-06-12 19:25:30,495 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=27/40
+2026-06-12 19:25:34,132 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=28/40
+2026-06-12 19:25:37,717 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=29/40
+2026-06-12 19:25:40,981 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=30/40
+2026-06-12 19:26:16,462 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:26:16,898 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=31/40
+2026-06-12 19:26:51,827 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:26:52,252 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=32/40
+2026-06-12 19:28:07,295 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:28:08,984 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=33/40
+2026-06-12 19:29:23,284 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:29:24,936 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=34/40
+2026-06-12 19:30:50,981 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:30:53,097 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=35/40
+2026-06-12 19:31:27,959 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:31:28,454 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=36/40
+2026-06-12 19:32:03,612 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:32:05,105 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=37/40
+2026-06-12 19:33:19,891 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:33:21,848 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=38/40
+2026-06-12 19:34:41,594 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:34:45,254 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=39/40
+2026-06-12 19:39:27,267 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:39:30,561 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=40/40
+2026-06-12 19:42:53,797 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 19:42:58,665 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 19:43:05,630 | INFO | [TRAIN DONE] train_time=5.03
+2026-06-12 19:43:05,631 | INFO | [VAL] acc=0.7204, macro_precision=0.6592, macro_recall=0.6363, macro_f1=0.6366
+2026-06-12 19:43:05,631 | INFO | [TEST] acc=0.7601, macro_precision=0.7011, macro_recall=0.7059, macro_f1=0.6996
+2026-06-12 19:43:05,631 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/03_Full_Clean/LogisticRegression
+2026-06-12 19:43:05,631 | INFO | [START] Scenario=03_Full_Clean | Model=RandomForest
+2026-06-12 19:43:05,631 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 19:43:05,632 | INFO | [HPO-DEEP] Model=RandomForest | Total candidate configs=70 | Sampled trials=18
+2026-06-12 19:43:05,632 | INFO | [HPO-DEEP] Scenario=03_Full_Clean | Model=RandomForest | Total candidate configs=70 | Sampled trials=18
+2026-06-12 19:43:05,632 | INFO | [HPO] Scenario=03_Full_Clean | Model=RandomForest | Trials=18
+2026-06-12 19:43:05,632 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=1/18
+2026-06-12 19:43:07,588 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=2/18
+2026-06-12 19:43:09,571 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=3/18
+2026-06-12 19:43:11,684 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=4/18
+2026-06-12 19:43:13,205 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=5/18
+2026-06-12 19:43:17,287 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=6/18
+2026-06-12 19:43:18,142 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=7/18
+2026-06-12 19:43:19,613 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=8/18
+2026-06-12 19:43:20,892 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=9/18
+2026-06-12 19:43:22,062 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=10/18
+2026-06-12 19:43:24,749 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=11/18
+2026-06-12 19:43:27,954 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=12/18
+2026-06-12 19:43:29,791 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=13/18
+2026-06-12 19:43:30,682 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=14/18
+2026-06-12 19:43:31,558 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=15/18
+2026-06-12 19:43:32,885 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=16/18
+2026-06-12 19:43:34,155 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=17/18
+2026-06-12 19:43:35,378 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=18/18
+2026-06-12 19:43:36,661 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 19:43:39,814 | INFO | [TRAIN DONE] train_time=1.28
+2026-06-12 19:43:39,814 | INFO | [VAL] acc=0.6177, macro_precision=0.5604, macro_recall=0.6017, macro_f1=0.5624
+2026-06-12 19:43:39,814 | INFO | [TEST] acc=0.6706, macro_precision=0.6070, macro_recall=0.6581, macro_f1=0.6128
+2026-06-12 19:43:39,814 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/03_Full_Clean/RandomForest
+2026-06-12 19:43:39,814 | INFO | [START] Scenario=03_Full_Clean | Model=XGBoost
+2026-06-12 19:43:39,814 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 19:43:39,814 | INFO | [HPO-DEEP] Model=XGBoost | Total candidate configs=70 | Sampled trials=18
+2026-06-12 19:43:39,814 | INFO | [HPO-DEEP] Scenario=03_Full_Clean | Model=XGBoost | Total candidate configs=70 | Sampled trials=18
+2026-06-12 19:43:39,814 | INFO | [HPO] Scenario=03_Full_Clean | Model=XGBoost | Trials=18
+2026-06-12 19:43:39,814 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=1/18
+2026-06-12 19:44:02,201 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=2/18
+2026-06-12 19:44:28,512 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=3/18
+2026-06-12 19:44:55,319 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=4/18
+2026-06-12 19:45:17,015 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=5/18
+2026-06-12 19:46:20,345 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=6/18
+2026-06-12 19:46:49,324 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=7/18
+2026-06-12 19:47:54,613 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=8/18
+2026-06-12 19:48:58,252 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=9/18
+2026-06-12 19:49:41,829 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=10/18
+2026-06-12 19:51:26,209 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=11/18
+2026-06-12 19:53:09,162 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=12/18
+2026-06-12 19:54:30,676 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=13/18
+2026-06-12 19:55:11,916 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=14/18
+2026-06-12 19:55:52,769 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=15/18
+2026-06-12 19:57:16,997 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=16/18
+2026-06-12 19:58:30,760 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=17/18
+2026-06-12 19:59:35,048 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=18/18
+2026-06-12 20:00:37,895 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 20:00:38,741 | ERROR | [EXPERIMENT FAILED] Scenario=03_Full_Clean | Model=XGBoost | error=Must have at least 1 validation dataset for early stopping.
+Traceback (most recent call last):
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 2851, in run_training
+    result = train_final_experiment(
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 1438, in train_final_experiment
+    model, used_model_params, model_notes, fit_info = fit_model(
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 1029, in fit_model
+    model.fit(x_train, y_train_encoded, **fit_kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/training.py", line 182, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 261, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 261, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 446, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+2026-06-12 20:00:38,743 | INFO | [START] Scenario=03_Full_Clean | Model=LinearSVC
+2026-06-12 20:00:38,743 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 20:00:38,749 | INFO | [HPO-DEEP] Model=LinearSVC | Total candidate configs=143 | Sampled trials=45
+2026-06-12 20:00:38,749 | INFO | [HPO-DEEP] Scenario=03_Full_Clean | Model=LinearSVC | Total candidate configs=143 | Sampled trials=45
+2026-06-12 20:00:38,749 | INFO | [HPO] Scenario=03_Full_Clean | Model=LinearSVC | Trials=45
+2026-06-12 20:00:38,749 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=1/45
+2026-06-12 20:00:39,366 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=2/45
+2026-06-12 20:00:39,913 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=3/45
+2026-06-12 20:00:41,542 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=4/45
+2026-06-12 20:00:42,597 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=5/45
+2026-06-12 20:00:42,915 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=6/45
+2026-06-12 20:00:43,477 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=7/45
+2026-06-12 20:00:44,014 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=8/45
+2026-06-12 20:00:44,334 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=9/45
+2026-06-12 20:00:45,947 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=10/45
+2026-06-12 20:00:46,530 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=11/45
+2026-06-12 20:00:48,118 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=12/45
+2026-06-12 20:00:48,448 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=13/45
+2026-06-12 20:00:49,039 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=14/45
+2026-06-12 20:00:49,639 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=15/45
+2026-06-12 20:00:50,236 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=16/45
+2026-06-12 20:00:51,367 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=17/45
+2026-06-12 20:00:51,753 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=18/45
+2026-06-12 20:00:52,553 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=19/45
+2026-06-12 20:00:53,352 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=20/45
+2026-06-12 20:00:54,641 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=21/45
+2026-06-12 20:00:55,042 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=22/45
+2026-06-12 20:00:55,483 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=23/45
+2026-06-12 20:00:56,833 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=24/45
+2026-06-12 20:00:57,537 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=25/45
+2026-06-12 20:00:59,639 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=26/45
+2026-06-12 20:01:00,653 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=27/45
+2026-06-12 20:01:02,212 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=28/45
+2026-06-12 20:01:04,897 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=29/45
+2026-06-12 20:01:06,835 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=30/45
+2026-06-12 20:01:07,338 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=31/45
+2026-06-12 20:01:07,840 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=32/45
+2026-06-12 20:01:09,263 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=33/45
+2026-06-12 20:01:10,440 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=34/45
+2026-06-12 20:01:14,084 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=35/45
+2026-06-12 20:01:14,423 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=36/45
+2026-06-12 20:01:14,764 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=37/45
+2026-06-12 20:01:15,368 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=38/45
+2026-06-12 20:01:15,728 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=39/45
+2026-06-12 20:01:16,086 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=40/45
+2026-06-12 20:01:16,445 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=41/45
+2026-06-12 20:01:17,156 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=42/45
+2026-06-12 20:01:17,884 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=43/45
+2026-06-12 20:01:19,810 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=44/45
+2026-06-12 20:01:21,769 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=45/45
+2026-06-12 20:01:23,139 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 3)
+2026-06-12 20:01:26,545 | INFO | [TRAIN DONE] train_time=1.63
+2026-06-12 20:01:26,545 | INFO | [VAL] acc=0.7240, macro_precision=0.6562, macro_recall=0.6324, macro_f1=0.6358
+2026-06-12 20:01:26,545 | INFO | [TEST] acc=0.7542, macro_precision=0.6843, macro_recall=0.6644, macro_f1=0.6698
+2026-06-12 20:01:26,545 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/03_Full_Clean/LinearSVC
+2026-06-12 20:01:26,546 | INFO | [START] Scenario=04_No_Stopwords | Model=LogisticRegression
+2026-06-12 20:01:26,547 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 20:01:26,547 | INFO | [HPO-DEEP] Model=LogisticRegression | Total candidate configs=130 | Sampled trials=40
+2026-06-12 20:01:26,547 | INFO | [HPO-DEEP] Scenario=04_No_Stopwords | Model=LogisticRegression | Total candidate configs=130 | Sampled trials=40
+2026-06-12 20:01:26,547 | INFO | [HPO] Scenario=04_No_Stopwords | Model=LogisticRegression | Trials=40
+2026-06-12 20:01:26,547 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=1/40
+2026-06-12 20:01:29,040 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=2/40
+2026-06-12 20:01:30,733 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=3/40
+2026-06-12 20:01:33,245 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=4/40
+2026-06-12 20:01:34,453 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=5/40
+2026-06-12 20:01:36,221 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=6/40
+2026-06-12 20:01:38,152 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=7/40
+2026-06-12 20:01:38,666 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=8/40
+2026-06-12 20:01:40,512 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=9/40
+2026-06-12 20:01:41,854 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=10/40
+2026-06-12 20:01:44,631 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=11/40
+2026-06-12 20:01:47,437 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=12/40
+2026-06-12 20:01:48,120 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=13/40
+2026-06-12 20:01:48,729 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=14/40
+2026-06-12 20:01:49,349 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=15/40
+2026-06-12 20:01:51,964 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=16/40
+2026-06-12 20:01:55,255 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=17/40
+2026-06-12 20:01:56,019 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=18/40
+2026-06-12 20:01:58,518 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=19/40
+2026-06-12 20:02:00,401 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=20/40
+2026-06-12 20:02:04,212 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=21/40
+2026-06-12 20:02:05,008 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=22/40
+2026-06-12 20:02:07,744 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=23/40
+2026-06-12 20:02:11,259 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=24/40
+2026-06-12 20:02:16,939 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=25/40
+2026-06-12 20:02:17,836 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=26/40
+2026-06-12 20:02:18,700 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=27/40
+2026-06-12 20:02:22,472 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=28/40
+2026-06-12 20:02:26,173 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=29/40
+2026-06-12 20:02:31,455 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=30/40
+2026-06-12 20:03:04,857 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 20:03:05,361 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=31/40
+2026-06-12 20:03:38,720 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 20:03:39,197 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=32/40
+2026-06-12 20:04:47,239 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 20:04:49,167 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=33/40
+2026-06-12 20:05:58,485 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 20:06:00,354 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=34/40
+2026-06-12 20:07:21,852 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 20:07:23,519 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=35/40
+2026-06-12 20:07:56,799 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 20:07:57,436 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=36/40
+2026-06-12 20:08:31,620 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 20:08:33,539 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=37/40
+2026-06-12 20:09:41,555 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 20:09:44,634 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=38/40
+2026-06-12 20:10:58,772 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 20:11:01,256 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=39/40
+2026-06-12 20:15:33,546 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 20:15:37,485 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=40/40
+2026-06-12 20:18:45,677 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 20:18:50,118 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 20:18:58,556 | INFO | [TRAIN DONE] train_time=6.34
+2026-06-12 20:18:58,556 | INFO | [VAL] acc=0.7168, macro_precision=0.6668, macro_recall=0.6282, macro_f1=0.6314
+2026-06-12 20:18:58,556 | INFO | [TEST] acc=0.7625, macro_precision=0.7025, macro_recall=0.7019, macro_f1=0.6971
+2026-06-12 20:18:58,556 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/04_No_Stopwords/LogisticRegression
+2026-06-12 20:18:58,556 | INFO | [START] Scenario=04_No_Stopwords | Model=RandomForest
+2026-06-12 20:18:58,556 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 20:18:58,557 | INFO | [HPO-DEEP] Model=RandomForest | Total candidate configs=70 | Sampled trials=18
+2026-06-12 20:18:58,557 | INFO | [HPO-DEEP] Scenario=04_No_Stopwords | Model=RandomForest | Total candidate configs=70 | Sampled trials=18
+2026-06-12 20:18:58,557 | INFO | [HPO] Scenario=04_No_Stopwords | Model=RandomForest | Trials=18
+2026-06-12 20:18:58,557 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=1/18
+2026-06-12 20:19:00,429 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=2/18
+2026-06-12 20:19:02,105 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=3/18
+2026-06-12 20:19:04,403 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=4/18
+2026-06-12 20:19:06,120 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=5/18
+2026-06-12 20:19:10,029 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=6/18
+2026-06-12 20:19:11,008 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=7/18
+2026-06-12 20:19:12,667 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=8/18
+2026-06-12 20:19:13,893 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=9/18
+2026-06-12 20:19:15,023 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=10/18
+2026-06-12 20:19:18,039 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=11/18
+2026-06-12 20:19:20,240 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=12/18
+2026-06-12 20:19:21,867 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=13/18
+2026-06-12 20:19:22,706 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=14/18
+2026-06-12 20:19:23,626 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=15/18
+2026-06-12 20:19:25,163 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=16/18
+2026-06-12 20:19:26,323 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=17/18
+2026-06-12 20:19:27,208 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=18/18
+2026-06-12 20:19:28,089 | INFO | [VECTORIZER] max_features=20000, ngram_range=(1, 1)
+2026-06-12 20:19:31,033 | INFO | [TRAIN DONE] train_time=0.93
+2026-06-12 20:19:31,034 | INFO | [VAL] acc=0.6762, macro_precision=0.7115, macro_recall=0.5507, macro_f1=0.5788
+2026-06-12 20:19:31,034 | INFO | [TEST] acc=0.6957, macro_precision=0.7424, macro_recall=0.5653, macro_f1=0.5956
+2026-06-12 20:19:31,034 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/04_No_Stopwords/RandomForest
+2026-06-12 20:19:31,034 | INFO | [START] Scenario=04_No_Stopwords | Model=XGBoost
+2026-06-12 20:19:31,034 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 20:19:31,034 | INFO | [HPO-DEEP] Model=XGBoost | Total candidate configs=70 | Sampled trials=18
+2026-06-12 20:19:31,034 | INFO | [HPO-DEEP] Scenario=04_No_Stopwords | Model=XGBoost | Total candidate configs=70 | Sampled trials=18
+2026-06-12 20:19:31,034 | INFO | [HPO] Scenario=04_No_Stopwords | Model=XGBoost | Trials=18
+2026-06-12 20:19:31,034 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=1/18
+2026-06-12 20:19:50,308 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=2/18
+2026-06-12 20:20:12,657 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=3/18
+2026-06-12 20:20:38,680 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=4/18
+2026-06-12 20:20:59,295 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=5/18
+2026-06-12 20:22:00,357 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=6/18
+2026-06-12 20:22:28,843 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=7/18
+2026-06-12 20:23:28,400 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=8/18
+2026-06-12 20:24:27,868 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=9/18
+2026-06-12 20:25:10,721 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=10/18
+2026-06-12 20:26:51,594 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=11/18
+2026-06-12 20:28:27,354 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=12/18
+2026-06-12 20:29:42,687 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=13/18
+2026-06-12 20:30:23,510 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=14/18
+2026-06-12 20:31:03,395 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=15/18
+2026-06-12 20:32:21,971 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=16/18
+2026-06-12 20:33:32,472 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=17/18
+2026-06-12 20:34:33,770 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=18/18
+2026-06-12 20:35:34,011 | INFO | [VECTORIZER] max_features=70000, ngram_range=(1, 2)
+2026-06-12 20:35:34,830 | ERROR | [EXPERIMENT FAILED] Scenario=04_No_Stopwords | Model=XGBoost | error=Must have at least 1 validation dataset for early stopping.
+Traceback (most recent call last):
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 2851, in run_training
+    result = train_final_experiment(
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 1438, in train_final_experiment
+    model, used_model_params, model_notes, fit_info = fit_model(
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 1029, in fit_model
+    model.fit(x_train, y_train_encoded, **fit_kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/training.py", line 182, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 261, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 261, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 446, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+2026-06-12 20:35:34,832 | INFO | [START] Scenario=04_No_Stopwords | Model=LinearSVC
+2026-06-12 20:35:34,832 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 20:35:34,832 | INFO | [HPO-DEEP] Model=LinearSVC | Total candidate configs=143 | Sampled trials=45
+2026-06-12 20:35:34,832 | INFO | [HPO-DEEP] Scenario=04_No_Stopwords | Model=LinearSVC | Total candidate configs=143 | Sampled trials=45
+2026-06-12 20:35:34,832 | INFO | [HPO] Scenario=04_No_Stopwords | Model=LinearSVC | Trials=45
+2026-06-12 20:35:34,832 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=1/45
+2026-06-12 20:35:35,406 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=2/45
+2026-06-12 20:35:35,929 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=3/45
+2026-06-12 20:35:37,488 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=4/45
+2026-06-12 20:35:38,548 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=5/45
+2026-06-12 20:35:38,862 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=6/45
+2026-06-12 20:35:39,423 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=7/45
+2026-06-12 20:35:39,944 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=8/45
+2026-06-12 20:35:40,252 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=9/45
+2026-06-12 20:35:41,753 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=10/45
+2026-06-12 20:35:42,312 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=11/45
+2026-06-12 20:35:43,844 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=12/45
+2026-06-12 20:35:44,158 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=13/45
+2026-06-12 20:35:44,759 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=14/45
+2026-06-12 20:35:45,398 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=15/45
+2026-06-12 20:35:45,970 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=16/45
+2026-06-12 20:35:47,086 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=17/45
+2026-06-12 20:35:47,431 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=18/45
+2026-06-12 20:35:48,117 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=19/45
+2026-06-12 20:35:48,764 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=20/45
+2026-06-12 20:35:50,042 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=21/45
+2026-06-12 20:35:50,534 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=22/45
+2026-06-12 20:35:50,941 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=23/45
+2026-06-12 20:35:52,207 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=24/45
+2026-06-12 20:35:52,857 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=25/45
+2026-06-12 20:35:54,860 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=26/45
+2026-06-12 20:35:55,870 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=27/45
+2026-06-12 20:35:57,325 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=28/45
+2026-06-12 20:35:59,941 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=29/45
+2026-06-12 20:36:01,793 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=30/45
+2026-06-12 20:36:02,276 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=31/45
+2026-06-12 20:36:02,760 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=32/45
+2026-06-12 20:36:04,086 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=33/45
+2026-06-12 20:36:05,183 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=34/45
+2026-06-12 20:36:08,807 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=35/45
+2026-06-12 20:36:09,130 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=36/45
+2026-06-12 20:36:09,450 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=37/45
+2026-06-12 20:36:10,022 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=38/45
+2026-06-12 20:36:10,361 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=39/45
+2026-06-12 20:36:10,699 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=40/45
+2026-06-12 20:36:11,038 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=41/45
+2026-06-12 20:36:11,701 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=42/45
+2026-06-12 20:36:12,383 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=43/45
+2026-06-12 20:36:14,271 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=44/45
+2026-06-12 20:36:16,162 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=45/45
+2026-06-12 20:36:17,502 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 20:36:19,511 | INFO | [TRAIN DONE] train_time=0.68
+2026-06-12 20:36:19,511 | INFO | [VAL] acc=0.7264, macro_precision=0.6630, macro_recall=0.6472, macro_f1=0.6452
+2026-06-12 20:36:19,511 | INFO | [TEST] acc=0.7506, macro_precision=0.6746, macro_recall=0.6654, macro_f1=0.6672
+2026-06-12 20:36:19,511 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/04_No_Stopwords/LinearSVC
+2026-06-12 20:36:19,515 | INFO | [START] Scenario=05_Balanced | Model=LogisticRegression
+2026-06-12 20:36:19,515 | INFO | [DATA] train=23834, val=837, test=838
+2026-06-12 20:36:19,515 | INFO | [HPO-DEEP] Model=LogisticRegression | Total candidate configs=130 | Sampled trials=40
+2026-06-12 20:36:19,515 | INFO | [HPO-DEEP] Scenario=05_Balanced | Model=LogisticRegression | Total candidate configs=130 | Sampled trials=40
+2026-06-12 20:36:19,515 | INFO | [HPO] Scenario=05_Balanced | Model=LogisticRegression | Trials=40
+2026-06-12 20:36:19,515 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=1/40
+2026-06-12 20:36:22,860 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=2/40
+2026-06-12 20:36:25,333 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=3/40
+2026-06-12 20:36:32,091 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=4/40
+2026-06-12 20:36:33,279 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=5/40
+2026-06-12 20:36:37,263 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=6/40
+2026-06-12 20:36:41,207 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=7/40
+2026-06-12 20:36:42,498 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=8/40
+2026-06-12 20:36:45,704 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=9/40
+2026-06-12 20:36:48,005 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=10/40
+2026-06-12 20:36:52,392 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=11/40
+2026-06-12 20:36:59,843 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=12/40
+2026-06-12 20:37:01,518 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=13/40
+2026-06-12 20:37:04,128 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=14/40
+2026-06-12 20:37:05,815 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=15/40
+2026-06-12 20:37:10,225 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=16/40
+2026-06-12 20:37:17,435 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=17/40
+2026-06-12 20:37:19,175 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=18/40
+2026-06-12 20:37:26,849 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=19/40
+2026-06-12 20:37:32,667 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=20/40
+2026-06-12 20:37:42,450 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=21/40
+2026-06-12 20:37:44,396 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=22/40
+2026-06-12 20:37:48,355 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=23/40
+2026-06-12 20:37:54,143 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=24/40
+2026-06-12 20:38:07,304 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=25/40
+2026-06-12 20:38:09,432 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=26/40
+2026-06-12 20:38:11,548 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=27/40
+2026-06-12 20:38:17,593 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=28/40
+2026-06-12 20:38:27,047 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=29/40
+2026-06-12 20:38:33,928 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=30/40
+2026-06-12 20:38:34,898 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=31/40
+2026-06-12 20:38:35,937 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=32/40
+2026-06-12 20:38:37,997 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=33/40
+2026-06-12 20:38:40,768 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=34/40
+2026-06-12 20:38:43,754 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=35/40
+2026-06-12 20:38:44,692 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=36/40
+2026-06-12 20:38:45,633 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=37/40
+2026-06-12 20:38:47,838 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=38/40
+2026-06-12 20:38:50,150 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=39/40
+2026-06-12 20:39:02,063 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=40/40
+2026-06-12 20:39:06,917 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 20:39:15,230 | INFO | [TRAIN DONE] train_time=6.17
+2026-06-12 20:39:15,230 | INFO | [VAL] acc=0.7204, macro_precision=0.6721, macro_recall=0.6381, macro_f1=0.6407
+2026-06-12 20:39:15,230 | INFO | [TEST] acc=0.7530, macro_precision=0.6971, macro_recall=0.6827, macro_f1=0.6841
+2026-06-12 20:39:15,230 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/05_Balanced/LogisticRegression
+2026-06-12 20:39:15,230 | INFO | [START] Scenario=05_Balanced | Model=RandomForest
+2026-06-12 20:39:15,230 | INFO | [DATA] train=23834, val=837, test=838
+2026-06-12 20:39:15,232 | INFO | [HPO-DEEP] Model=RandomForest | Total candidate configs=70 | Sampled trials=18
+2026-06-12 20:39:15,232 | INFO | [HPO-DEEP] Scenario=05_Balanced | Model=RandomForest | Total candidate configs=70 | Sampled trials=18
+2026-06-12 20:39:15,232 | INFO | [HPO] Scenario=05_Balanced | Model=RandomForest | Trials=18
+2026-06-12 20:39:15,232 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=1/18
+2026-06-12 20:39:18,437 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=2/18
+2026-06-12 20:39:22,201 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=3/18
+2026-06-12 20:39:26,005 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=4/18
+2026-06-12 20:39:29,255 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=5/18
+2026-06-12 20:39:36,846 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=6/18
+2026-06-12 20:39:38,687 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=7/18
+2026-06-12 20:39:41,174 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=8/18
+2026-06-12 20:39:44,423 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=9/18
+2026-06-12 20:39:47,073 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=10/18
+2026-06-12 20:39:51,798 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=11/18
+2026-06-12 20:39:55,987 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=12/18
+2026-06-12 20:40:00,258 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=13/18
+2026-06-12 20:40:03,010 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=14/18
+2026-06-12 20:40:05,794 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=15/18
+2026-06-12 20:40:10,308 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=16/18
+2026-06-12 20:40:14,526 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=17/18
+2026-06-12 20:40:16,883 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=18/18
+2026-06-12 20:40:19,280 | INFO | [VECTORIZER] max_features=20000, ngram_range=(1, 1)
+2026-06-12 20:40:23,810 | INFO | [TRAIN DONE] train_time=2.66
+2026-06-12 20:40:23,811 | INFO | [VAL] acc=0.6714, macro_precision=0.6784, macro_recall=0.5686, macro_f1=0.5796
+2026-06-12 20:40:23,811 | INFO | [TEST] acc=0.7088, macro_precision=0.6910, macro_recall=0.5988, macro_f1=0.6139
+2026-06-12 20:40:23,811 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/05_Balanced/RandomForest
+2026-06-12 20:40:23,811 | INFO | [START] Scenario=05_Balanced | Model=XGBoost
+2026-06-12 20:40:23,811 | INFO | [DATA] train=23834, val=837, test=838
+2026-06-12 20:40:23,811 | INFO | [HPO-DEEP] Model=XGBoost | Total candidate configs=70 | Sampled trials=18
+2026-06-12 20:40:23,811 | INFO | [HPO-DEEP] Scenario=05_Balanced | Model=XGBoost | Total candidate configs=70 | Sampled trials=18
+2026-06-12 20:40:23,811 | INFO | [HPO] Scenario=05_Balanced | Model=XGBoost | Trials=18
+2026-06-12 20:40:23,811 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=1/18
+2026-06-12 20:40:51,986 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=2/18
+2026-06-12 20:41:34,956 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=3/18
+2026-06-12 20:42:15,341 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=4/18
+2026-06-12 20:42:43,559 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=5/18
+2026-06-12 20:43:57,235 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=6/18
+2026-06-12 20:44:34,059 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=7/18
+2026-06-12 20:46:15,238 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=8/18
+2026-06-12 20:47:55,018 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=9/18
+2026-06-12 20:48:51,770 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=10/18
+2026-06-12 20:51:00,333 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=11/18
+2026-06-12 20:53:06,344 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=12/18
+2026-06-12 20:55:09,545 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=13/18
+2026-06-12 20:56:00,971 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=14/18
+2026-06-12 20:56:53,016 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=15/18
+2026-06-12 20:59:00,298 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=16/18
+2026-06-12 21:01:02,563 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=17/18
+2026-06-12 21:02:21,990 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=18/18
+2026-06-12 21:03:40,746 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 21:03:42,425 | ERROR | [EXPERIMENT FAILED] Scenario=05_Balanced | Model=XGBoost | error=Must have at least 1 validation dataset for early stopping.
+Traceback (most recent call last):
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 2851, in run_training
+    result = train_final_experiment(
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 1438, in train_final_experiment
+    model, used_model_params, model_notes, fit_info = fit_model(
+  File "<PROJECT_ROOT>/src/train_traditional_models.py", line 1029, in fit_model
+    model.fit(x_train, y_train_encoded, **fit_kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/training.py", line 182, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 261, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 261, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+  File "<PROJECT_ROOT>/.venv_modeling/lib/python3.9/site-packages/xgboost/callback.py", line 446, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+2026-06-12 21:03:42,429 | INFO | [START] Scenario=05_Balanced | Model=LinearSVC
+2026-06-12 21:03:42,430 | INFO | [DATA] train=23834, val=837, test=838
+2026-06-12 21:03:42,437 | INFO | [HPO-DEEP] Model=LinearSVC | Total candidate configs=143 | Sampled trials=45
+2026-06-12 21:03:42,437 | INFO | [HPO-DEEP] Scenario=05_Balanced | Model=LinearSVC | Total candidate configs=143 | Sampled trials=45
+2026-06-12 21:03:42,437 | INFO | [HPO] Scenario=05_Balanced | Model=LinearSVC | Trials=45
+2026-06-12 21:03:42,437 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=1/45
+2026-06-12 21:03:44,381 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=2/45
+2026-06-12 21:03:45,986 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=3/45
+2026-06-12 21:03:50,968 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=4/45
+2026-06-12 21:03:55,135 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=5/45
+2026-06-12 21:03:56,265 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=6/45
+2026-06-12 21:03:57,837 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=7/45
+2026-06-12 21:03:59,462 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=8/45
+2026-06-12 21:04:00,599 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=9/45
+2026-06-12 21:04:05,332 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=10/45
+2026-06-12 21:04:06,964 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=11/45
+2026-06-12 21:04:11,978 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=12/45
+2026-06-12 21:04:13,367 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=13/45
+2026-06-12 21:04:14,997 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=14/45
+2026-06-12 21:04:16,763 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=15/45
+2026-06-12 21:04:18,608 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=16/45
+2026-06-12 21:04:21,199 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=17/45
+2026-06-12 21:04:22,886 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=18/45
+2026-06-12 21:04:24,679 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=19/45
+2026-06-12 21:04:26,682 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=20/45
+2026-06-12 21:04:30,763 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=21/45
+2026-06-12 21:04:33,105 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=22/45
+2026-06-12 21:04:35,455 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=23/45
+2026-06-12 21:04:39,076 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=24/45
+2026-06-12 21:04:41,636 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=25/45
+2026-06-12 21:04:49,100 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=26/45
+2026-06-12 21:04:53,508 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=27/45
+2026-06-12 21:04:59,263 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=28/45
+2026-06-12 21:05:11,132 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=29/45
+2026-06-12 21:05:19,167 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=30/45
+2026-06-12 21:05:24,517 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=31/45
+2026-06-12 21:05:29,866 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=32/45
+2026-06-12 21:05:36,731 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=33/45
+2026-06-12 21:05:44,168 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=34/45
+2026-06-12 21:06:02,486 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=35/45
+2026-06-12 21:06:04,309 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=36/45
+2026-06-12 21:06:06,122 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=37/45
+2026-06-12 21:06:07,992 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=38/45
+2026-06-12 21:06:10,378 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=39/45
+2026-06-12 21:06:12,792 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=40/45
+2026-06-12 21:06:15,239 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=41/45
+2026-06-12 21:06:17,924 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=42/45
+2026-06-12 21:06:20,589 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=43/45
+2026-06-12 21:06:27,691 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=44/45
+2026-06-12 21:06:35,390 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=45/45
+2026-06-12 21:06:40,375 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 21:06:45,246 | INFO | [TRAIN DONE] train_time=2.88
+2026-06-12 21:06:45,246 | INFO | [VAL] acc=0.7204, macro_precision=0.6991, macro_recall=0.6323, macro_f1=0.6390
+2026-06-12 21:06:45,246 | INFO | [TEST] acc=0.7494, macro_precision=0.7065, macro_recall=0.6861, macro_f1=0.6876
+2026-06-12 21:06:45,246 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml_hpo_deep/05_Balanced/LinearSVC
+2026-06-12 21:06:53,621 | INFO | === TRADITIONAL ML TRAINING SUMMARY ===
+2026-06-12 21:06:53,621 | INFO | Total experiments: 20
+2026-06-12 21:06:53,622 | INFO | Successful experiments: 15
+2026-06-12 21:06:53,622 | INFO | Failed experiments: 5
+2026-06-12 21:06:53,622 | INFO | Best scenario: 01_Raw_Data
+2026-06-12 21:06:53,622 | INFO | Best model: LogisticRegression
+2026-06-12 21:06:53,622 | INFO | Best validation Macro-F1: 0.6492
+2026-06-12 21:06:53,622 | INFO | Best test Macro-F1: 0.6954
+2026-06-12 21:06:53,622 | INFO | Best test Accuracy: 0.7601
+2026-06-12 21:06:53,622 | INFO | Output folder: data/08_Modeling_Results/traditional_ml_hpo_deep

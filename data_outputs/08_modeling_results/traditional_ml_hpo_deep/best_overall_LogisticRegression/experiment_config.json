@@ -1,0 +1,43 @@
+{
+  "scenario": "01_Raw_Data",
+  "model_name": "LogisticRegression",
+  "text_column": "post_content_for_labeling",
+  "selected_trial_id": 29,
+  "selection_metric": "validation_macro_f1",
+  "tie_breakers": [
+    "validation_weighted_f1",
+    "validation_accuracy",
+    "model_simplicity_if_macro_f1_within_0.003"
+  ],
+  "tfidf_params": {
+    "analyzer": "word",
+    "max_features": 50000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 1,
+    "max_df": 0.95,
+    "sublinear_tf": true
+  },
+  "model_params": {
+    "C": 10.0,
+    "solver": "lbfgs"
+  },
+  "model_params_effective": {
+    "C": 10.0,
+    "solver": "lbfgs"
+  },
+  "fallback_used": false,
+  "warning_message": "",
+  "train_rows": 6698,
+  "val_rows": 837,
+  "test_rows": 838,
+  "split_paths": {
+    "train": "data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_train.csv",
+    "val": "data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_val.csv",
+    "test": "data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_test.csv"
+  },
+  "notes": "",
+  "created_at": "2026-06-12T18:28:27"
+}

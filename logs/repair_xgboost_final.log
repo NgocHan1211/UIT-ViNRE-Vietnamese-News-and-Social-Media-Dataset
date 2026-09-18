@@ -1,0 +1,55 @@
+2026-06-12 21:55:09,026 | INFO | [SCENARIO FOUND] 01_Raw_Data
+2026-06-12 21:55:09,027 | INFO |   train = data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_train.csv
+2026-06-12 21:55:09,027 | INFO |   val   = data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_val.csv
+2026-06-12 21:55:09,027 | INFO |   test  = data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_test.csv
+2026-06-12 21:55:09,027 | INFO | [SCENARIO FOUND] 02_Basic_Clean
+2026-06-12 21:55:09,027 | INFO |   train = data/07_Cleaned_Data/02_Basic_Clean/02_Basic_Clean/kb2_train.csv
+2026-06-12 21:55:09,027 | INFO |   val   = data/07_Cleaned_Data/02_Basic_Clean/02_Basic_Clean/kb2_val.csv
+2026-06-12 21:55:09,027 | INFO |   test  = data/07_Cleaned_Data/02_Basic_Clean/02_Basic_Clean/kb2_test.csv
+2026-06-12 21:55:09,028 | INFO | [SCENARIO FOUND] 03_Full_Clean
+2026-06-12 21:55:09,028 | INFO |   train = data/07_Cleaned_Data/03_Full_Clean/03_Full_Clean/kb3_train.csv
+2026-06-12 21:55:09,028 | INFO |   val   = data/07_Cleaned_Data/03_Full_Clean/03_Full_Clean/kb3_val.csv
+2026-06-12 21:55:09,028 | INFO |   test  = data/07_Cleaned_Data/03_Full_Clean/03_Full_Clean/kb3_test.csv
+2026-06-12 21:55:09,028 | INFO | [SCENARIO FOUND] 04_No_Stopwords
+2026-06-12 21:55:09,028 | INFO |   train = data/07_Cleaned_Data/04_No_Stopwords/04_No_Stopwords/kb4_train.csv
+2026-06-12 21:55:09,028 | INFO |   val   = data/07_Cleaned_Data/04_No_Stopwords/04_No_Stopwords/kb4_val.csv
+2026-06-12 21:55:09,028 | INFO |   test  = data/07_Cleaned_Data/04_No_Stopwords/04_No_Stopwords/kb4_test.csv
+2026-06-12 21:55:09,028 | INFO | [SCENARIO FOUND] 05_Balanced
+2026-06-12 21:55:09,028 | INFO |   train = data/07_Cleaned_Data/05_Balanced/05_Balanced/kb5_train.csv
+2026-06-12 21:55:09,028 | INFO |   val   = data/07_Cleaned_Data/05_Balanced/05_Balanced/kb5_val.csv
+2026-06-12 21:55:09,028 | INFO |   test  = data/07_Cleaned_Data/05_Balanced/05_Balanced/kb5_test.csv
+2026-06-12 21:55:09,028 | INFO | Starting DS107 traditional ML training
+2026-06-12 21:55:09,028 | INFO | data_dir=data/07_Cleaned_Data
+2026-06-12 21:55:09,028 | INFO | output_dir=data/08_Modeling_Results/traditional_ml_hpo_deep
+2026-06-12 21:55:09,028 | INFO | scenarios=['01_Raw_Data', '02_Basic_Clean', '03_Full_Clean', '04_No_Stopwords', '05_Balanced']
+2026-06-12 21:55:09,028 | INFO | models=['LogisticRegression', 'RandomForest', 'XGBoost', 'LinearSVC']
+2026-06-12 21:55:09,028 | INFO | tuning_mode=fast
+2026-06-12 21:55:09,028 | INFO | repair_failed_final=True
+2026-06-12 21:55:09,163 | INFO | [TEXT COLUMN] Scenario=01_Raw_Data uses text_column=post_content_for_labeling
+2026-06-12 21:55:09,314 | INFO | [TEXT COLUMN] Scenario=02_Basic_Clean uses text_column=post_content_for_labeling
+2026-06-12 21:55:09,471 | INFO | [TEXT COLUMN] Scenario=03_Full_Clean uses text_column=post_content_for_labeling
+2026-06-12 21:55:09,620 | INFO | [TEXT COLUMN] Scenario=04_No_Stopwords uses text_column=post_content_for_labeling
+2026-06-12 21:55:09,977 | INFO | [TEXT COLUMN] Scenario=05_Balanced uses text_column=post_content_for_labeling
+2026-06-12 21:55:10,560 | INFO | Repair failed final experiments: 5
+2026-06-12 21:55:10,560 | INFO | XGBoost failed final experiments selected for repair: 5
+2026-06-12 21:55:10,560 | INFO | [REPAIR BACKUP] data/08_Modeling_Results/traditional_ml_hpo_deep/all_model_results_summary.csv -> data/08_Modeling_Results/traditional_ml_hpo_deep/backup_before_xgboost_repair/all_model_results_summary.csv
+2026-06-12 21:55:10,561 | INFO | [REPAIR BACKUP] data/08_Modeling_Results/traditional_ml_hpo_deep/best_hyperparameters_by_model.csv -> data/08_Modeling_Results/traditional_ml_hpo_deep/backup_before_xgboost_repair/best_hyperparameters_by_model.csv
+2026-06-12 21:55:10,561 | INFO | [REPAIR BACKUP] data/08_Modeling_Results/traditional_ml_hpo_deep/hpo_tuning_diagnostics.json -> data/08_Modeling_Results/traditional_ml_hpo_deep/backup_before_xgboost_repair/hpo_tuning_diagnostics.json
+2026-06-12 21:55:10,562 | INFO | [REPAIR BACKUP] data/08_Modeling_Results/traditional_ml_hpo_deep/hyperparameter_reasoning_report.md -> data/08_Modeling_Results/traditional_ml_hpo_deep/backup_before_xgboost_repair/hyperparameter_reasoning_report.md
+2026-06-12 21:55:10,563 | INFO | [REPAIR BACKUP] data/08_Modeling_Results/traditional_ml_hpo_deep/traditional_ml_technical_report.md -> data/08_Modeling_Results/traditional_ml_hpo_deep/backup_before_xgboost_repair/traditional_ml_technical_report.md
+2026-06-12 21:55:11,771 | INFO | [REPAIR START] Scenario=01_Raw_Data | Model=XGBoost | Best trial=15
+2026-06-12 21:56:33,448 | INFO | [REPAIR DONE] Scenario=01_Raw_Data | val_macro_f1=0.5358 | test_macro_f1=0.6178
+2026-06-12 21:56:33,453 | INFO | [REPAIR START] Scenario=02_Basic_Clean | Model=XGBoost | Best trial=16
+2026-06-12 21:57:42,141 | INFO | [REPAIR DONE] Scenario=02_Basic_Clean | val_macro_f1=0.5369 | test_macro_f1=0.6145
+2026-06-12 21:57:42,145 | INFO | [REPAIR START] Scenario=03_Full_Clean | Model=XGBoost | Best trial=16
+2026-06-12 21:58:51,208 | INFO | [REPAIR DONE] Scenario=03_Full_Clean | val_macro_f1=0.5458 | test_macro_f1=0.6189
+2026-06-12 21:58:51,211 | INFO | [REPAIR START] Scenario=04_No_Stopwords | Model=XGBoost | Best trial=15
+2026-06-12 22:00:14,758 | INFO | [REPAIR DONE] Scenario=04_No_Stopwords | val_macro_f1=0.5345 | test_macro_f1=0.6078
+2026-06-12 22:00:14,763 | INFO | [REPAIR START] Scenario=05_Balanced | Model=XGBoost | Best trial=16
+2026-06-12 22:02:05,091 | INFO | [REPAIR DONE] Scenario=05_Balanced | val_macro_f1=0.5379 | test_macro_f1=0.6137
+2026-06-12 22:02:05,100 | INFO | [REPAIR BEST UPDATE] Best overall unchanged or not XGBoost; best_model artifacts left in place.
+2026-06-12 22:02:06,631 | INFO | Repaired XGBoost scenarios: 5
+2026-06-12 22:02:06,631 | INFO | Final experiments: 20
+2026-06-12 22:02:06,631 | INFO | Successful experiments: 20
+2026-06-12 22:02:06,631 | INFO | Failed experiments: 0
+2026-06-12 22:02:06,631 | INFO | Output folder: data/08_Modeling_Results/traditional_ml_hpo_deep

@@ -1,0 +1,449 @@
+2026-06-12 16:17:12,838 | INFO | [SCENARIO FOUND] 01_Raw_Data
+2026-06-12 16:17:12,840 | INFO |   train = data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_train.csv
+2026-06-12 16:17:12,840 | INFO |   val   = data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_val.csv
+2026-06-12 16:17:12,840 | INFO |   test  = data/07_Cleaned_Data/01_Raw_Data/01_Raw_Data/kb1_test.csv
+2026-06-12 16:17:12,840 | INFO | [SCENARIO FOUND] 02_Basic_Clean
+2026-06-12 16:17:12,840 | INFO |   train = data/07_Cleaned_Data/02_Basic_Clean/02_Basic_Clean/kb2_train.csv
+2026-06-12 16:17:12,840 | INFO |   val   = data/07_Cleaned_Data/02_Basic_Clean/02_Basic_Clean/kb2_val.csv
+2026-06-12 16:17:12,840 | INFO |   test  = data/07_Cleaned_Data/02_Basic_Clean/02_Basic_Clean/kb2_test.csv
+2026-06-12 16:17:12,840 | INFO | [SCENARIO FOUND] 03_Full_Clean
+2026-06-12 16:17:12,840 | INFO |   train = data/07_Cleaned_Data/03_Full_Clean/03_Full_Clean/kb3_train.csv
+2026-06-12 16:17:12,840 | INFO |   val   = data/07_Cleaned_Data/03_Full_Clean/03_Full_Clean/kb3_val.csv
+2026-06-12 16:17:12,840 | INFO |   test  = data/07_Cleaned_Data/03_Full_Clean/03_Full_Clean/kb3_test.csv
+2026-06-12 16:17:12,840 | INFO | [SCENARIO FOUND] 04_No_Stopwords
+2026-06-12 16:17:12,840 | INFO |   train = data/07_Cleaned_Data/04_No_Stopwords/04_No_Stopwords/kb4_train.csv
+2026-06-12 16:17:12,840 | INFO |   val   = data/07_Cleaned_Data/04_No_Stopwords/04_No_Stopwords/kb4_val.csv
+2026-06-12 16:17:12,840 | INFO |   test  = data/07_Cleaned_Data/04_No_Stopwords/04_No_Stopwords/kb4_test.csv
+2026-06-12 16:17:12,840 | INFO | [SCENARIO FOUND] 05_Balanced
+2026-06-12 16:17:12,840 | INFO |   train = data/07_Cleaned_Data/05_Balanced/05_Balanced/kb5_train.csv
+2026-06-12 16:17:12,840 | INFO |   val   = data/07_Cleaned_Data/05_Balanced/05_Balanced/kb5_val.csv
+2026-06-12 16:17:12,840 | INFO |   test  = data/07_Cleaned_Data/05_Balanced/05_Balanced/kb5_test.csv
+2026-06-12 16:17:12,841 | INFO | Starting DS107 traditional ML training
+2026-06-12 16:17:12,841 | INFO | data_dir=data/07_Cleaned_Data
+2026-06-12 16:17:12,841 | INFO | output_dir=data/08_Modeling_Results/traditional_ml
+2026-06-12 16:17:12,841 | INFO | scenarios=['01_Raw_Data', '02_Basic_Clean', '03_Full_Clean', '04_No_Stopwords', '05_Balanced']
+2026-06-12 16:17:12,841 | INFO | models=['LogisticRegression', 'RandomForest', 'XGBoost', 'LinearSVC']
+2026-06-12 16:17:12,841 | INFO | tuning_mode=fast
+2026-06-12 16:17:13,064 | INFO | [TEXT COLUMN] Scenario=01_Raw_Data uses text_column=post_content_for_labeling
+2026-06-12 16:17:13,291 | INFO | [TEXT COLUMN] Scenario=02_Basic_Clean uses text_column=post_content_for_labeling
+2026-06-12 16:17:13,532 | INFO | [TEXT COLUMN] Scenario=03_Full_Clean uses text_column=post_content_for_labeling
+2026-06-12 16:17:13,757 | INFO | [TEXT COLUMN] Scenario=04_No_Stopwords uses text_column=post_content_for_labeling
+2026-06-12 16:17:14,477 | INFO | [TEXT COLUMN] Scenario=05_Balanced uses text_column=post_content_for_labeling
+2026-06-12 16:17:17,888 | INFO | [START] Scenario=01_Raw_Data | Model=LogisticRegression
+2026-06-12 16:17:17,890 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:17:17,890 | INFO | [TUNING] Model=LogisticRegression generated 16 configs; using first 12 deterministic configs
+2026-06-12 16:17:17,890 | INFO | [HPO] Scenario=01_Raw_Data | Model=LogisticRegression | Trials=12
+2026-06-12 16:17:17,891 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=1/12
+2026-06-12 16:17:52,234 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:17:56,379 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=2/12
+2026-06-12 16:18:37,922 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:18:42,274 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=3/12
+2026-06-12 16:20:09,445 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:20:14,372 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=4/12
+2026-06-12 16:21:33,208 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:21:38,298 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=5/12
+2026-06-12 16:22:00,810 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:22:01,513 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=6/12
+2026-06-12 16:22:26,243 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:22:28,467 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=7/12
+2026-06-12 16:23:25,386 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:23:28,515 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=8/12
+2026-06-12 16:24:34,076 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:24:40,593 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=9/12
+2026-06-12 16:25:09,638 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:25:12,417 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=10/12
+2026-06-12 16:25:41,295 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:25:42,330 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=11/12
+2026-06-12 16:26:32,957 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:26:35,296 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LogisticRegression | Trial=12/12
+2026-06-12 16:27:31,509 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:27:35,294 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 16:27:45,364 | INFO | [TRAIN DONE] train_time=6.45
+2026-06-12 16:27:45,366 | INFO | [VAL] acc=0.7073, macro_precision=0.6468, macro_recall=0.6465, macro_f1=0.6365
+2026-06-12 16:27:45,366 | INFO | [TEST] acc=0.7542, macro_precision=0.6865, macro_recall=0.7192, macro_f1=0.6972
+2026-06-12 16:27:45,366 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/01_Raw_Data/LogisticRegression
+2026-06-12 16:27:45,367 | INFO | [START] Scenario=01_Raw_Data | Model=RandomForest
+2026-06-12 16:27:45,367 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:27:45,367 | INFO | [TUNING] Model=RandomForest generated 16 configs; using first 6 deterministic configs
+2026-06-12 16:27:45,367 | INFO | [HPO] Scenario=01_Raw_Data | Model=RandomForest | Trials=6
+2026-06-12 16:27:45,367 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=1/6
+2026-06-12 16:27:53,046 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=2/6
+2026-06-12 16:27:54,931 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=3/6
+2026-06-12 16:27:58,036 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=4/6
+2026-06-12 16:28:01,373 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=5/6
+2026-06-12 16:28:05,264 | INFO | [TUNING] Scenario=01_Raw_Data | Model=RandomForest | Trial=6/6
+2026-06-12 16:28:08,004 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 16:28:14,621 | INFO | [TRAIN DONE] train_time=3.63
+2026-06-12 16:28:14,622 | INFO | [VAL] acc=0.6153, macro_precision=0.7117, macro_recall=0.4880, macro_f1=0.5271
+2026-06-12 16:28:14,622 | INFO | [TEST] acc=0.6695, macro_precision=0.7600, macro_recall=0.5468, macro_f1=0.5861
+2026-06-12 16:28:14,622 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/01_Raw_Data/RandomForest
+2026-06-12 16:28:14,623 | INFO | [START] Scenario=01_Raw_Data | Model=XGBoost
+2026-06-12 16:28:14,623 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:28:14,623 | INFO | [TUNING] Model=XGBoost generated 16 configs; using first 6 deterministic configs
+2026-06-12 16:28:14,623 | INFO | [HPO] Scenario=01_Raw_Data | Model=XGBoost | Trials=6
+2026-06-12 16:28:14,623 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=1/6
+2026-06-12 16:28:41,100 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=2/6
+2026-06-12 16:29:06,339 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=3/6
+2026-06-12 16:29:48,067 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=4/6
+2026-06-12 16:30:33,090 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=5/6
+2026-06-12 16:31:10,685 | INFO | [TUNING] Scenario=01_Raw_Data | Model=XGBoost | Trial=6/6
+2026-06-12 16:31:48,279 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 1)
+2026-06-12 16:32:32,622 | INFO | [TRAIN DONE] train_time=42.16
+2026-06-12 16:32:32,623 | INFO | [VAL] acc=0.5890, macro_precision=0.5070, macro_recall=0.5486, macro_f1=0.5171
+2026-06-12 16:32:32,623 | INFO | [TEST] acc=0.6432, macro_precision=0.5827, macro_recall=0.6309, macro_f1=0.5984
+2026-06-12 16:32:32,623 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/01_Raw_Data/XGBoost
+2026-06-12 16:32:32,623 | INFO | [START] Scenario=01_Raw_Data | Model=LinearSVC
+2026-06-12 16:32:32,623 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:32:32,623 | INFO | [TUNING] Model=LinearSVC generated 20 configs; using first 12 deterministic configs
+2026-06-12 16:32:32,623 | INFO | [HPO] Scenario=01_Raw_Data | Model=LinearSVC | Trials=12
+2026-06-12 16:32:32,623 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=1/12
+2026-06-12 16:32:33,123 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=2/12
+2026-06-12 16:32:33,615 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=3/12
+2026-06-12 16:32:34,616 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=4/12
+2026-06-12 16:32:35,526 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=5/12
+2026-06-12 16:32:35,982 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=6/12
+2026-06-12 16:32:36,430 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=7/12
+2026-06-12 16:32:37,284 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=8/12
+2026-06-12 16:32:38,359 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=9/12
+2026-06-12 16:32:38,965 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=10/12
+2026-06-12 16:32:39,628 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=11/12
+2026-06-12 16:32:40,667 | INFO | [TUNING] Scenario=01_Raw_Data | Model=LinearSVC | Trial=12/12
+2026-06-12 16:32:41,938 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 2)
+2026-06-12 16:32:46,519 | INFO | [TRAIN DONE] train_time=1.56
+2026-06-12 16:32:46,520 | INFO | [VAL] acc=0.7252, macro_precision=0.6512, macro_recall=0.6454, macro_f1=0.6387
+2026-06-12 16:32:46,521 | INFO | [TEST] acc=0.7554, macro_precision=0.6745, macro_recall=0.6945, macro_f1=0.6802
+2026-06-12 16:32:46,521 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/01_Raw_Data/LinearSVC
+2026-06-12 16:32:46,525 | INFO | [START] Scenario=02_Basic_Clean | Model=LogisticRegression
+2026-06-12 16:32:46,525 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:32:46,526 | INFO | [TUNING] Model=LogisticRegression generated 16 configs; using first 12 deterministic configs
+2026-06-12 16:32:46,526 | INFO | [HPO] Scenario=02_Basic_Clean | Model=LogisticRegression | Trials=12
+2026-06-12 16:32:46,526 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=1/12
+2026-06-12 16:33:09,729 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:33:12,139 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=2/12
+2026-06-12 16:33:34,579 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:33:36,229 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=3/12
+2026-06-12 16:34:13,721 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:34:16,061 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=4/12
+2026-06-12 16:34:57,670 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:34:59,136 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=5/12
+2026-06-12 16:35:17,719 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:35:19,489 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=6/12
+2026-06-12 16:35:38,300 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:35:38,876 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=7/12
+2026-06-12 16:36:20,950 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:36:25,149 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=8/12
+2026-06-12 16:37:08,024 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:37:11,268 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=9/12
+2026-06-12 16:37:30,797 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:37:32,563 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=10/12
+2026-06-12 16:37:51,239 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:37:51,912 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=11/12
+2026-06-12 16:38:29,298 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:38:31,861 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LogisticRegression | Trial=12/12
+2026-06-12 16:39:16,156 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:39:19,731 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 16:39:27,776 | INFO | [TRAIN DONE] train_time=4.06
+2026-06-12 16:39:27,777 | INFO | [VAL] acc=0.7097, macro_precision=0.6531, macro_recall=0.6501, macro_f1=0.6407
+2026-06-12 16:39:27,778 | INFO | [TEST] acc=0.7566, macro_precision=0.6859, macro_recall=0.7209, macro_f1=0.6982
+2026-06-12 16:39:27,778 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/02_Basic_Clean/LogisticRegression
+2026-06-12 16:39:27,778 | INFO | [START] Scenario=02_Basic_Clean | Model=RandomForest
+2026-06-12 16:39:27,778 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:39:27,778 | INFO | [TUNING] Model=RandomForest generated 16 configs; using first 6 deterministic configs
+2026-06-12 16:39:27,779 | INFO | [HPO] Scenario=02_Basic_Clean | Model=RandomForest | Trials=6
+2026-06-12 16:39:27,779 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=1/6
+2026-06-12 16:39:30,264 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=2/6
+2026-06-12 16:39:32,415 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=3/6
+2026-06-12 16:39:36,369 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=4/6
+2026-06-12 16:39:40,692 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=5/6
+2026-06-12 16:39:44,556 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=RandomForest | Trial=6/6
+2026-06-12 16:39:48,279 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 2)
+2026-06-12 16:39:56,833 | INFO | [TRAIN DONE] train_time=4.19
+2026-06-12 16:39:56,835 | INFO | [VAL] acc=0.6093, macro_precision=0.6757, macro_recall=0.4976, macro_f1=0.5243
+2026-06-12 16:39:56,835 | INFO | [TEST] acc=0.6468, macro_precision=0.7422, macro_recall=0.5298, macro_f1=0.5687
+2026-06-12 16:39:56,835 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/02_Basic_Clean/RandomForest
+2026-06-12 16:39:56,835 | INFO | [START] Scenario=02_Basic_Clean | Model=XGBoost
+2026-06-12 16:39:56,835 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:39:56,835 | INFO | [TUNING] Model=XGBoost generated 16 configs; using first 6 deterministic configs
+2026-06-12 16:39:56,836 | INFO | [HPO] Scenario=02_Basic_Clean | Model=XGBoost | Trials=6
+2026-06-12 16:39:56,836 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=1/6
+2026-06-12 16:40:24,436 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=2/6
+2026-06-12 16:40:47,608 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=3/6
+2026-06-12 16:41:22,834 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=4/6
+2026-06-12 16:42:06,544 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=5/6
+2026-06-12 16:42:45,608 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=XGBoost | Trial=6/6
+2026-06-12 16:43:21,470 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 1)
+2026-06-12 16:44:04,703 | INFO | [TRAIN DONE] train_time=40.88
+2026-06-12 16:44:04,704 | INFO | [VAL] acc=0.5818, macro_precision=0.5137, macro_recall=0.5430, macro_f1=0.5173
+2026-06-12 16:44:04,704 | INFO | [TEST] acc=0.6539, macro_precision=0.5863, macro_recall=0.6477, macro_f1=0.6075
+2026-06-12 16:44:04,704 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/02_Basic_Clean/XGBoost
+2026-06-12 16:44:04,704 | INFO | [START] Scenario=02_Basic_Clean | Model=LinearSVC
+2026-06-12 16:44:04,704 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:44:04,704 | INFO | [TUNING] Model=LinearSVC generated 20 configs; using first 12 deterministic configs
+2026-06-12 16:44:04,704 | INFO | [HPO] Scenario=02_Basic_Clean | Model=LinearSVC | Trials=12
+2026-06-12 16:44:04,704 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=1/12
+2026-06-12 16:44:05,275 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=2/12
+2026-06-12 16:44:05,818 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=3/12
+2026-06-12 16:44:06,837 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=4/12
+2026-06-12 16:44:07,673 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=5/12
+2026-06-12 16:44:08,144 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=6/12
+2026-06-12 16:44:08,596 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=7/12
+2026-06-12 16:44:09,420 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=8/12
+2026-06-12 16:44:10,248 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=9/12
+2026-06-12 16:44:10,718 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=10/12
+2026-06-12 16:44:11,203 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=11/12
+2026-06-12 16:44:12,669 | INFO | [TUNING] Scenario=02_Basic_Clean | Model=LinearSVC | Trial=12/12
+2026-06-12 16:44:14,296 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 2)
+2026-06-12 16:44:18,954 | INFO | [TRAIN DONE] train_time=1.40
+2026-06-12 16:44:18,955 | INFO | [VAL] acc=0.7228, macro_precision=0.6493, macro_recall=0.6539, macro_f1=0.6414
+2026-06-12 16:44:18,955 | INFO | [TEST] acc=0.7518, macro_precision=0.6735, macro_recall=0.7162, macro_f1=0.6901
+2026-06-12 16:44:18,955 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/02_Basic_Clean/LinearSVC
+2026-06-12 16:44:18,962 | INFO | [START] Scenario=03_Full_Clean | Model=LogisticRegression
+2026-06-12 16:44:18,962 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:44:18,962 | INFO | [TUNING] Model=LogisticRegression generated 16 configs; using first 12 deterministic configs
+2026-06-12 16:44:18,962 | INFO | [HPO] Scenario=03_Full_Clean | Model=LogisticRegression | Trials=12
+2026-06-12 16:44:18,963 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=1/12
+2026-06-12 16:44:44,339 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:44:46,816 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=2/12
+2026-06-12 16:45:08,206 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:45:09,912 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=3/12
+2026-06-12 16:45:48,239 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:45:49,521 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=4/12
+2026-06-12 16:46:31,082 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:46:33,950 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=5/12
+2026-06-12 16:46:52,579 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:46:53,163 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=6/12
+2026-06-12 16:47:11,624 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:47:13,314 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=7/12
+2026-06-12 16:47:49,426 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:47:53,204 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=8/12
+2026-06-12 16:48:39,230 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:48:41,332 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=9/12
+2026-06-12 16:49:00,678 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:49:02,403 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=10/12
+2026-06-12 16:49:20,755 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:49:22,616 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=11/12
+2026-06-12 16:49:59,894 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:50:02,085 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LogisticRegression | Trial=12/12
+2026-06-12 16:50:43,529 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:50:45,899 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 2)
+2026-06-12 16:50:51,068 | INFO | [TRAIN DONE] train_time=2.94
+2026-06-12 16:50:51,069 | INFO | [VAL] acc=0.7097, macro_precision=0.6439, macro_recall=0.6516, macro_f1=0.6404
+2026-06-12 16:50:51,069 | INFO | [TEST] acc=0.7578, macro_precision=0.6921, macro_recall=0.7283, macro_f1=0.7055
+2026-06-12 16:50:51,069 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/03_Full_Clean/LogisticRegression
+2026-06-12 16:50:51,069 | INFO | [START] Scenario=03_Full_Clean | Model=RandomForest
+2026-06-12 16:50:51,069 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:50:51,069 | INFO | [TUNING] Model=RandomForest generated 16 configs; using first 6 deterministic configs
+2026-06-12 16:50:51,069 | INFO | [HPO] Scenario=03_Full_Clean | Model=RandomForest | Trials=6
+2026-06-12 16:50:51,070 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=1/6
+2026-06-12 16:50:52,854 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=2/6
+2026-06-12 16:50:55,253 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=3/6
+2026-06-12 16:50:58,413 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=4/6
+2026-06-12 16:51:01,952 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=5/6
+2026-06-12 16:51:04,330 | INFO | [TUNING] Scenario=03_Full_Clean | Model=RandomForest | Trial=6/6
+2026-06-12 16:51:07,555 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 16:51:14,818 | INFO | [TRAIN DONE] train_time=3.89
+2026-06-12 16:51:14,820 | INFO | [VAL] acc=0.6189, macro_precision=0.6758, macro_recall=0.5008, macro_f1=0.5259
+2026-06-12 16:51:14,820 | INFO | [TEST] acc=0.6611, macro_precision=0.7377, macro_recall=0.5290, macro_f1=0.5697
+2026-06-12 16:51:14,820 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/03_Full_Clean/RandomForest
+2026-06-12 16:51:14,821 | INFO | [START] Scenario=03_Full_Clean | Model=XGBoost
+2026-06-12 16:51:14,821 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:51:14,821 | INFO | [TUNING] Model=XGBoost generated 16 configs; using first 6 deterministic configs
+2026-06-12 16:51:14,821 | INFO | [HPO] Scenario=03_Full_Clean | Model=XGBoost | Trials=6
+2026-06-12 16:51:14,821 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=1/6
+2026-06-12 16:51:45,551 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=2/6
+2026-06-12 16:52:08,736 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=3/6
+2026-06-12 16:52:44,529 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=4/6
+2026-06-12 16:53:22,709 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=5/6
+2026-06-12 16:54:00,944 | INFO | [TUNING] Scenario=03_Full_Clean | Model=XGBoost | Trial=6/6
+2026-06-12 16:54:42,284 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 16:55:27,969 | INFO | [TRAIN DONE] train_time=42.79
+2026-06-12 16:55:27,971 | INFO | [VAL] acc=0.5496, macro_precision=0.5105, macro_recall=0.5586, macro_f1=0.5181
+2026-06-12 16:55:27,971 | INFO | [TEST] acc=0.6146, macro_precision=0.5542, macro_recall=0.6487, macro_f1=0.5820
+2026-06-12 16:55:27,971 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/03_Full_Clean/XGBoost
+2026-06-12 16:55:27,971 | INFO | [START] Scenario=03_Full_Clean | Model=LinearSVC
+2026-06-12 16:55:27,971 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:55:27,972 | INFO | [TUNING] Model=LinearSVC generated 20 configs; using first 12 deterministic configs
+2026-06-12 16:55:27,972 | INFO | [HPO] Scenario=03_Full_Clean | Model=LinearSVC | Trials=12
+2026-06-12 16:55:27,972 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=1/12
+2026-06-12 16:55:28,442 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=2/12
+2026-06-12 16:55:28,871 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=3/12
+2026-06-12 16:55:29,733 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=4/12
+2026-06-12 16:55:30,767 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=5/12
+2026-06-12 16:55:31,254 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=6/12
+2026-06-12 16:55:31,719 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=7/12
+2026-06-12 16:55:32,534 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=8/12
+2026-06-12 16:55:33,345 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=9/12
+2026-06-12 16:55:33,799 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=10/12
+2026-06-12 16:55:34,260 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=11/12
+2026-06-12 16:55:35,104 | INFO | [TUNING] Scenario=03_Full_Clean | Model=LinearSVC | Trial=12/12
+2026-06-12 16:55:35,995 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 2)
+2026-06-12 16:55:38,754 | INFO | [TRAIN DONE] train_time=0.88
+2026-06-12 16:55:38,754 | INFO | [VAL] acc=0.7145, macro_precision=0.6438, macro_recall=0.6367, macro_f1=0.6311
+2026-06-12 16:55:38,754 | INFO | [TEST] acc=0.7542, macro_precision=0.6805, macro_recall=0.6970, macro_f1=0.6852
+2026-06-12 16:55:38,754 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/03_Full_Clean/LinearSVC
+2026-06-12 16:55:38,757 | INFO | [START] Scenario=04_No_Stopwords | Model=LogisticRegression
+2026-06-12 16:55:38,757 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 16:55:38,757 | INFO | [TUNING] Model=LogisticRegression generated 16 configs; using first 12 deterministic configs
+2026-06-12 16:55:38,757 | INFO | [HPO] Scenario=04_No_Stopwords | Model=LogisticRegression | Trials=12
+2026-06-12 16:55:38,757 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=1/12
+2026-06-12 16:55:59,316 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:56:02,217 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=2/12
+2026-06-12 16:56:22,535 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:56:24,393 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=3/12
+2026-06-12 16:57:00,712 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:57:03,379 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=4/12
+2026-06-12 16:57:42,634 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:57:45,286 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=5/12
+2026-06-12 16:58:03,746 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:58:04,379 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=6/12
+2026-06-12 16:58:22,412 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:58:24,512 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=7/12
+2026-06-12 16:59:00,205 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:59:01,451 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=8/12
+2026-06-12 16:59:41,608 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 16:59:44,173 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=9/12
+2026-06-12 17:00:03,496 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 17:00:04,255 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=10/12
+2026-06-12 17:00:22,657 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 17:00:23,662 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=11/12
+2026-06-12 17:01:02,697 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 17:01:04,733 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LogisticRegression | Trial=12/12
+2026-06-12 17:01:42,898 | WARNING | [MODEL FALLBACK] LogisticRegression saga raised ConvergenceWarning; fallback to lbfgs
+2026-06-12 17:01:45,493 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 2)
+2026-06-12 17:01:50,263 | INFO | [TRAIN DONE] train_time=2.62
+2026-06-12 17:01:50,264 | INFO | [VAL] acc=0.7013, macro_precision=0.6365, macro_recall=0.6451, macro_f1=0.6322
+2026-06-12 17:01:50,264 | INFO | [TEST] acc=0.7625, macro_precision=0.6944, macro_recall=0.7324, macro_f1=0.7091
+2026-06-12 17:01:50,264 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/04_No_Stopwords/LogisticRegression
+2026-06-12 17:01:50,264 | INFO | [START] Scenario=04_No_Stopwords | Model=RandomForest
+2026-06-12 17:01:50,264 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 17:01:50,265 | INFO | [TUNING] Model=RandomForest generated 16 configs; using first 6 deterministic configs
+2026-06-12 17:01:50,265 | INFO | [HPO] Scenario=04_No_Stopwords | Model=RandomForest | Trials=6
+2026-06-12 17:01:50,265 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=1/6
+2026-06-12 17:01:51,529 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=2/6
+2026-06-12 17:01:53,545 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=3/6
+2026-06-12 17:01:56,557 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=4/6
+2026-06-12 17:02:00,283 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=5/6
+2026-06-12 17:02:02,879 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=RandomForest | Trial=6/6
+2026-06-12 17:02:06,020 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 17:02:12,794 | INFO | [TRAIN DONE] train_time=3.24
+2026-06-12 17:02:12,794 | INFO | [VAL] acc=0.6201, macro_precision=0.7150, macro_recall=0.5130, macro_f1=0.5474
+2026-06-12 17:02:12,794 | INFO | [TEST] acc=0.6706, macro_precision=0.7177, macro_recall=0.5371, macro_f1=0.5696
+2026-06-12 17:02:12,794 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/04_No_Stopwords/RandomForest
+2026-06-12 17:02:12,794 | INFO | [START] Scenario=04_No_Stopwords | Model=XGBoost
+2026-06-12 17:02:12,794 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 17:02:12,795 | INFO | [TUNING] Model=XGBoost generated 16 configs; using first 6 deterministic configs
+2026-06-12 17:02:12,795 | INFO | [HPO] Scenario=04_No_Stopwords | Model=XGBoost | Trials=6
+2026-06-12 17:02:12,795 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=1/6
+2026-06-12 17:02:38,397 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=2/6
+2026-06-12 17:03:03,820 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=3/6
+2026-06-12 17:03:39,638 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=4/6
+2026-06-12 17:04:15,835 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=5/6
+2026-06-12 17:04:52,117 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=XGBoost | Trial=6/6
+2026-06-12 17:05:28,946 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 1)
+2026-06-12 17:06:15,938 | INFO | [TRAIN DONE] train_time=44.23
+2026-06-12 17:06:15,938 | INFO | [VAL] acc=0.5854, macro_precision=0.5166, macro_recall=0.5476, macro_f1=0.5196
+2026-06-12 17:06:15,938 | INFO | [TEST] acc=0.6492, macro_precision=0.5735, macro_recall=0.6432, macro_f1=0.5964
+2026-06-12 17:06:15,938 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/04_No_Stopwords/XGBoost
+2026-06-12 17:06:15,938 | INFO | [START] Scenario=04_No_Stopwords | Model=LinearSVC
+2026-06-12 17:06:15,938 | INFO | [DATA] train=6698, val=837, test=838
+2026-06-12 17:06:15,939 | INFO | [TUNING] Model=LinearSVC generated 20 configs; using first 12 deterministic configs
+2026-06-12 17:06:15,939 | INFO | [HPO] Scenario=04_No_Stopwords | Model=LinearSVC | Trials=12
+2026-06-12 17:06:15,939 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=1/12
+2026-06-12 17:06:16,575 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=2/12
+2026-06-12 17:06:17,054 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=3/12
+2026-06-12 17:06:18,098 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=4/12
+2026-06-12 17:06:18,902 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=5/12
+2026-06-12 17:06:19,354 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=6/12
+2026-06-12 17:06:19,807 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=7/12
+2026-06-12 17:06:20,626 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=8/12
+2026-06-12 17:06:21,443 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=9/12
+2026-06-12 17:06:22,019 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=10/12
+2026-06-12 17:06:22,587 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=11/12
+2026-06-12 17:06:23,688 | INFO | [TUNING] Scenario=04_No_Stopwords | Model=LinearSVC | Trial=12/12
+2026-06-12 17:06:24,773 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 17:06:28,592 | INFO | [TRAIN DONE] train_time=1.27
+2026-06-12 17:06:28,592 | INFO | [VAL] acc=0.7240, macro_precision=0.6435, macro_recall=0.6395, macro_f1=0.6323
+2026-06-12 17:06:28,593 | INFO | [TEST] acc=0.7625, macro_precision=0.6869, macro_recall=0.7042, macro_f1=0.6911
+2026-06-12 17:06:28,593 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/04_No_Stopwords/LinearSVC
+2026-06-12 17:06:28,610 | INFO | [START] Scenario=05_Balanced | Model=LogisticRegression
+2026-06-12 17:06:28,611 | INFO | [DATA] train=23834, val=837, test=838
+2026-06-12 17:06:28,611 | INFO | [TUNING] Model=LogisticRegression generated 16 configs; using first 12 deterministic configs
+2026-06-12 17:06:28,612 | INFO | [HPO] Scenario=05_Balanced | Model=LogisticRegression | Trials=12
+2026-06-12 17:06:28,612 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=1/12
+2026-06-12 17:06:30,133 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=2/12
+2026-06-12 17:06:31,958 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=3/12
+2026-06-12 17:06:35,656 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=4/12
+2026-06-12 17:06:38,742 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=5/12
+2026-06-12 17:06:40,421 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=6/12
+2026-06-12 17:06:42,422 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=7/12
+2026-06-12 17:06:45,996 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=8/12
+2026-06-12 17:06:49,237 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=9/12
+2026-06-12 17:06:50,757 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=10/12
+2026-06-12 17:06:53,075 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=11/12
+2026-06-12 17:06:56,333 | INFO | [TUNING] Scenario=05_Balanced | Model=LogisticRegression | Trial=12/12
+2026-06-12 17:06:59,393 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 2)
+2026-06-12 17:07:05,051 | INFO | [TRAIN DONE] train_time=3.27
+2026-06-12 17:07:05,051 | INFO | [VAL] acc=0.7216, macro_precision=0.6751, macro_recall=0.6442, macro_f1=0.6460
+2026-06-12 17:07:05,051 | INFO | [TEST] acc=0.7637, macro_precision=0.7066, macro_recall=0.7070, macro_f1=0.7034
+2026-06-12 17:07:05,051 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/05_Balanced/LogisticRegression
+2026-06-12 17:07:05,051 | INFO | [START] Scenario=05_Balanced | Model=RandomForest
+2026-06-12 17:07:05,051 | INFO | [DATA] train=23834, val=837, test=838
+2026-06-12 17:07:05,052 | INFO | [TUNING] Model=RandomForest generated 16 configs; using first 6 deterministic configs
+2026-06-12 17:07:05,052 | INFO | [HPO] Scenario=05_Balanced | Model=RandomForest | Trials=6
+2026-06-12 17:07:05,052 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=1/6
+2026-06-12 17:07:09,304 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=2/6
+2026-06-12 17:07:13,356 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=3/6
+2026-06-12 17:07:19,897 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=4/6
+2026-06-12 17:07:27,570 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=5/6
+2026-06-12 17:07:33,824 | INFO | [TUNING] Scenario=05_Balanced | Model=RandomForest | Trial=6/6
+2026-06-12 17:07:39,821 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 2)
+2026-06-12 17:07:48,304 | INFO | [TRAIN DONE] train_time=5.88
+2026-06-12 17:07:48,305 | INFO | [VAL] acc=0.6081, macro_precision=0.6711, macro_recall=0.5350, macro_f1=0.5547
+2026-06-12 17:07:48,305 | INFO | [TEST] acc=0.6802, macro_precision=0.6799, macro_recall=0.5844, macro_f1=0.6003
+2026-06-12 17:07:48,305 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/05_Balanced/RandomForest
+2026-06-12 17:07:48,305 | INFO | [START] Scenario=05_Balanced | Model=XGBoost
+2026-06-12 17:07:48,305 | INFO | [DATA] train=23834, val=837, test=838
+2026-06-12 17:07:48,305 | INFO | [TUNING] Model=XGBoost generated 16 configs; using first 6 deterministic configs
+2026-06-12 17:07:48,305 | INFO | [HPO] Scenario=05_Balanced | Model=XGBoost | Trials=6
+2026-06-12 17:07:48,305 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=1/6
+2026-06-12 17:08:18,092 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=2/6
+2026-06-12 17:08:52,704 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=3/6
+2026-06-12 17:09:38,271 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=4/6
+2026-06-12 17:10:27,845 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=5/6
+2026-06-12 17:11:14,621 | INFO | [TUNING] Scenario=05_Balanced | Model=XGBoost | Trial=6/6
+2026-06-12 17:12:01,136 | INFO | [VECTORIZER] max_features=30000, ngram_range=(1, 1)
+2026-06-12 17:13:25,084 | INFO | [TRAIN DONE] train_time=78.17
+2026-06-12 17:13:25,087 | INFO | [VAL] acc=0.5854, macro_precision=0.5259, macro_recall=0.5534, macro_f1=0.5290
+2026-06-12 17:13:25,088 | INFO | [TEST] acc=0.6492, macro_precision=0.5813, macro_recall=0.6422, macro_f1=0.6005
+2026-06-12 17:13:25,088 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/05_Balanced/XGBoost
+2026-06-12 17:13:25,088 | INFO | [START] Scenario=05_Balanced | Model=LinearSVC
+2026-06-12 17:13:25,089 | INFO | [DATA] train=23834, val=837, test=838
+2026-06-12 17:13:25,089 | INFO | [TUNING] Model=LinearSVC generated 20 configs; using first 12 deterministic configs
+2026-06-12 17:13:25,089 | INFO | [HPO] Scenario=05_Balanced | Model=LinearSVC | Trials=12
+2026-06-12 17:13:25,090 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=1/12
+2026-06-12 17:13:28,802 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=2/12
+2026-06-12 17:13:36,895 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=3/12
+2026-06-12 17:13:40,637 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=4/12
+2026-06-12 17:13:43,416 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=5/12
+2026-06-12 17:13:45,755 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=6/12
+2026-06-12 17:13:48,045 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=7/12
+2026-06-12 17:13:50,724 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=8/12
+2026-06-12 17:13:54,274 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=9/12
+2026-06-12 17:13:57,537 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=10/12
+2026-06-12 17:14:02,212 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=11/12
+2026-06-12 17:14:06,098 | INFO | [TUNING] Scenario=05_Balanced | Model=LinearSVC | Trial=12/12
+2026-06-12 17:14:12,162 | INFO | [VECTORIZER] max_features=50000, ngram_range=(1, 2)
+2026-06-12 17:14:21,928 | INFO | [TRAIN DONE] train_time=5.57
+2026-06-12 17:14:21,929 | INFO | [VAL] acc=0.7168, macro_precision=0.6916, macro_recall=0.6321, macro_f1=0.6365
+2026-06-12 17:14:21,929 | INFO | [TEST] acc=0.7578, macro_precision=0.7011, macro_recall=0.6964, macro_f1=0.6907
+2026-06-12 17:14:21,929 | INFO | [SAVED] output path=data/08_Modeling_Results/traditional_ml/05_Balanced/LinearSVC
+2026-06-12 17:14:29,969 | INFO | === TRADITIONAL ML TRAINING SUMMARY ===
+2026-06-12 17:14:29,972 | INFO | Total experiments: 20
+2026-06-12 17:14:29,973 | INFO | Successful experiments: 20
+2026-06-12 17:14:29,973 | INFO | Failed experiments: 0
+2026-06-12 17:14:29,973 | INFO | Best scenario: 05_Balanced
+2026-06-12 17:14:29,973 | INFO | Best model: LogisticRegression
+2026-06-12 17:14:29,973 | INFO | Best validation Macro-F1: 0.6460
+2026-06-12 17:14:29,973 | INFO | Best test Macro-F1: 0.7034
+2026-06-12 17:14:29,973 | INFO | Best test Accuracy: 0.7637
+2026-06-12 17:14:29,973 | INFO | Output folder: data/08_Modeling_Results/traditional_ml
