@@ -1,6 +1,5 @@
 # University of Information Technology, Vietnam National University Ho Chi Minh City (UIT)
 
-**Course:** DS107 - Computational Thinking for Data Science  
 **Project:** Vietnamese Facebook News Classification and User Reaction Analysis: An Engagement Metadata Approach  
 **Field:** Social Media Data Mining and Natural Language Processing (NLP)
 
