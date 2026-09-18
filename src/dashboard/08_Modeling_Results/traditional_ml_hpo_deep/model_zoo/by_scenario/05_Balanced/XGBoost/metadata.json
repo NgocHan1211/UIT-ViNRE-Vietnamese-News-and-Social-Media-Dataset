@@ -1,0 +1,14 @@
+{
+  "model_name": "XGBoost",
+  "scenario": "05_Balanced",
+  "selection_rule": "Scenario/model artifact from final deep HPO benchmark",
+  "validation_macro_f1": 0.5378849076588702,
+  "validation_accuracy": 0.6033452807646356,
+  "test_macro_f1": 0.6136848130258474,
+  "test_accuracy": 0.6646778042959427,
+  "supports_predict_proba": true,
+  "source_artifact_dir": "data/08_Modeling_Results/traditional_ml_hpo_deep/05_Balanced/XGBoost",
+  "artifact_reference_mode": "symlink",
+  "notes": "Test metrics are reported only for final evaluation; model selection used validation Macro-F1.",
+  "created_at": "2026-06-12T23:09:34"
+}

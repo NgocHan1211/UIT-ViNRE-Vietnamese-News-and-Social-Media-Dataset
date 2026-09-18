@@ -5,3 +5,5 @@ matplotlib
 seaborn
 joblib
 xgboost
+torch
+transformers

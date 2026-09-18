@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+# Large model weights/checkpoints are submitted separately as model artifacts.
+*.joblib
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.h5
+*.ckpt
+
+# Keep model registry/metadata, but exclude full model artifact folders if they
+# are restored locally for demo.
+08_Modeling_Results/phobert_kb4_best_model/
+08_Modeling_Results/xlmr_best_model_kb5/
+08_Modeling_Results/mbert_best_model_kb4/
+08_Modeling_Results/traditional_ml_hpo_deep/01_Raw_Data/
+08_Modeling_Results/traditional_ml_hpo_deep/02_Basic_Clean/
+08_Modeling_Results/traditional_ml_hpo_deep/03_Full_Clean/
+08_Modeling_Results/traditional_ml_hpo_deep/04_No_Stopwords/
+08_Modeling_Results/traditional_ml_hpo_deep/05_Balanced/

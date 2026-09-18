@@ -1,0 +1,1184 @@
+{
+  "input_paths": {
+    "master": "data/02_Processed_Data/Master_Facebook_News_Posts_TeamCrawl_After_Dedup.csv",
+    "label_dirs": [
+      "data/05_Labeling/Final_Labeled",
+      "data/05_Labeling/Final_Pilot_Labeled"
+    ]
+  },
+  "output_paths": {
+    "master_labeled": "data/06_Final_Master_Data/Master_Facebook_News_Posts_TeamCrawl_Labeled.csv",
+    "model_dataset": "data/06_Final_Master_Data/Topic_Classification_Model_Dataset.csv",
+    "streamlit_enriched": "data/06_Final_Master_Data/Public_Response_Streamlit_Enriched.csv",
+    "pilot_exclude": "data/06_Final_Master_Data/Pilot_Record_IDs_Exclude_From_Test.csv",
+    "technical_report": "data/06_Final_Master_Data/Final_Master_Data_Technical_Report.md",
+    "statistics_json": "data/06_Final_Master_Data/Final_Master_Data_Statistics.json",
+    "missing_followers": "data/06_Final_Master_Data/missing_followers_by_page.csv",
+    "metadata_outlier_report": "data/06_Final_Master_Data/metadata_outlier_report.csv",
+    "label_join_conflicts": "data/06_Final_Master_Data/label_join_conflicts.csv",
+    "label_distribution": "data/06_Final_Master_Data/label_distribution.csv",
+    "metadata_coverage_summary": "data/06_Final_Master_Data/metadata_coverage_summary.csv",
+    "taxonomy_mapping_used": "data/06_Final_Master_Data/taxonomy_mapping_used.csv"
+  },
+  "run_timestamp": "2026-06-13T00:37:05",
+  "master_input_rows": 11786,
+  "master_input_columns": 89,
+  "master_labeled_rows": 11786,
+  "master_labeled_columns": 92,
+  "number_of_label_files_loaded": 6,
+  "label_file_summaries": [
+    {
+      "file": "data/05_Labeling/Final_Labeled/[DS107] Gán nhãn - Han.csv",
+      "source_group": "Final_Labeled",
+      "rows": 3796,
+      "columns": 11,
+      "extra_columns": [
+        "usable_for_topic_classification",
+        "usable_for_engagement",
+        "needs_topic_label",
+        "page_name",
+        "post_content_for_labeling",
+        "annotator_topic_label",
+        "annotator_topic_id",
+        "annotator_note",
+        "annotator_uncertain"
+      ]
+    },
+    {
+      "file": "data/05_Labeling/Final_Labeled/[DS107] Gán nhãn - Nhung.csv",
+      "source_group": "Final_Labeled",
+      "rows": 3797,
+      "columns": 11,
+      "extra_columns": [
+        "usable_for_topic_classification",
+        "usable_for_engagement",
+        "needs_topic_label",
+        "page_name",
+        "post_content_for_labeling",
+        "annotator_topic_label",
+        "annotator_topic_id",
+        "annotator_note",
+        "annotator_uncertain"
+      ]
+    },
+    {
+      "file": "data/05_Labeling/Final_Labeled/[DS107] Gán nhãn - Yen.csv",
+      "source_group": "Final_Labeled",
+      "rows": 3796,
+      "columns": 11,
+      "extra_columns": [
+        "usable_for_topic_classification",
+        "usable_for_engagement",
+        "needs_topic_label",
+        "page_name",
+        "post_content_for_labeling",
+        "annotator_topic_label",
+        "annotator_topic_id",
+        "annotator_note",
+        "annotator_uncertain"
+      ]
+    },
+    {
+      "file": "data/05_Labeling/Final_Pilot_Labeled/Topic Annotation Pilot Set 100 [2] - IAA_Merge-2.csv",
+      "source_group": "Final_Pilot_Labeled",
+      "rows": 100,
+      "columns": 20,
+      "extra_columns": [
+        "usable_for_topic_classification",
+        "needs_topic_label",
+        "page_name",
+        "post_content_for_labeling",
+        "annotator_Nhung_topic_label",
+        "annotator_Nhung_note",
+        "annotator_Yen_topic_label",
+        "annotator_Yen_note",
+        "annotator_Han_topic_label",
+        "annotator_Han_note",
+        "flag_ambiguity",
+        "is_disagreement",
+        "topic_label_final_auto",
+        "topic_label_final_train",
+        "topic_label_final_id_train",
+        "adjudicator_reason"
+      ]
+    },
+    {
+      "file": "data/05_Labeling/Final_Pilot_Labeled/[DS107] Topic Annotation Pilot Set 100 - IAA_Merge-2.csv",
+      "source_group": "Final_Pilot_Labeled",
+      "rows": 100,
+      "columns": 18,
+      "extra_columns": [
+        "usable_for_topic_classification",
+        "needs_topic_label",
+        "page_name",
+        "post_content_for_labeling",
+        "annotator_Nhung_topic_label",
+        "annotator_Nhung_note",
+        "annotator_Yen_topic_label",
+        "annotator_Yen_note",
+        "annotator_Han_topic_label",
+        "annotator_Han_note",
+        "flag_ambiguity",
+        "is_disagreement",
+        "topic_label_final_id",
+        "adjudicator_reason"
+      ]
+    },
+    {
+      "file": "data/05_Labeling/Final_Pilot_Labeled/[DS107] Topic Annotation Pilot Set 400 - IAA_Merge-4.csv",
+      "source_group": "Final_Pilot_Labeled",
+      "rows": 400,
+      "columns": 20,
+      "extra_columns": [
+        "usable_for_topic_classification",
+        "needs_topic_label",
+        "page_name",
+        "post_content_for_labeling",
+        "annotator_Nhung_topic_label",
+        "annotator_Nhung_note",
+        "annotator_Yen_topic_label",
+        "annotator_Yen_note",
+        "annotator_Han_topic_label",
+        "annotator_Han_note",
+        "flag_ambiguity",
+        "is_disagreement",
+        "topic_label_final_auto",
+        "topic_label_final_train",
+        "topic_label_final_id_train",
+        "adjudicator_reason"
+      ]
+    }
+  ],
+  "number_of_raw_label_rows": 11989,
+  "number_of_unique_labeled_record_id": 9221,
+  "number_of_labels_joined_successfully": 9202,
+  "number_of_labels_not_found_in_master": 19,
+  "number_of_conflicts": 2715,
+  "number_of_true_label_conflicts": 67,
+  "model_dataset_rows": 8922,
+  "streamlit_enriched_rows": 8922,
+  "pilot_exclude_rows": 600,
+  "unlabeled_with_valid_label_fixed": 0,
+  "t18_rows_in_master": 280,
+  "t18_excluded_rows": 0,
+  "t18_removed_from_model_dataset": 280,
+  "t18_removed_from_streamlit_enriched": 280,
+  "master_usable_for_topic_classification_rows_including_t18": 9202,
+  "usable_for_topic_classification_rows_after_t18_removal": 8922,
+  "metadata_outlier_rows": 38,
+  "metadata_outlier_report_rows": 63,
+  "manual_page_follower_overrides_applied_rows": 657,
+  "manual_page_follower_overrides": {
+    "theanh28": {
+      "page_name": "Theanh28 Entertainment",
+      "page_url": "https://www.facebook.com/Theanh28",
+      "page_followers": 13000000
+    },
+    "canhsatdieutratoiphammatuy": {
+      "page_name": "Cục Cảnh sát điều tra tội phạm về ma tuý",
+      "page_url": "https://www.facebook.com/Canhsatdieutratoiphammatuy",
+      "page_followers": 1100000
+    }
+  },
+  "usable_reaction_analysis_rows": 8008,
+  "usable_engagement_analysis_rows": 7985,
+  "usable_engagement_strict_rows": 7985,
+  "label_distribution": [
+    {
+      "topic_label_id": "T01",
+      "topic_label_final": "T01. POLITICS",
+      "count_in_master_labeled": 621,
+      "count_in_model_dataset": 621,
+      "count_in_streamlit_enriched": 621,
+      "uncertain_count": 4,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T02",
+      "topic_label_final": "T02. ECONOMY_BUSINESS_AND_FINANCE",
+      "count_in_master_labeled": 713,
+      "count_in_model_dataset": 713,
+      "count_in_streamlit_enriched": 713,
+      "uncertain_count": 1,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T03",
+      "topic_label_final": "T03. CRIME_LAW_AND_JUSTICE",
+      "count_in_master_labeled": 1635,
+      "count_in_model_dataset": 1635,
+      "count_in_streamlit_enriched": 1635,
+      "uncertain_count": 4,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T04",
+      "topic_label_final": "T04. HEALTH",
+      "count_in_master_labeled": 348,
+      "count_in_model_dataset": 348,
+      "count_in_streamlit_enriched": 348,
+      "uncertain_count": 2,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T05",
+      "topic_label_final": "T05. EDUCATION",
+      "count_in_master_labeled": 203,
+      "count_in_model_dataset": 203,
+      "count_in_streamlit_enriched": 203,
+      "uncertain_count": 0,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T06",
+      "topic_label_final": "T06. SCIENCE_AND_TECHNOLOGY",
+      "count_in_master_labeled": 194,
+      "count_in_model_dataset": 194,
+      "count_in_streamlit_enriched": 194,
+      "uncertain_count": 3,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T07",
+      "topic_label_final": "T07. ENVIRONMENT",
+      "count_in_master_labeled": 82,
+      "count_in_model_dataset": 82,
+      "count_in_streamlit_enriched": 82,
+      "uncertain_count": 1,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T08",
+      "topic_label_final": "T08. WEATHER",
+      "count_in_master_labeled": 151,
+      "count_in_model_dataset": 151,
+      "count_in_streamlit_enriched": 151,
+      "uncertain_count": 0,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T09",
+      "topic_label_final": "T09. DISASTER_ACCIDENT_AND_EMERGENCY_INCIDENT",
+      "count_in_master_labeled": 401,
+      "count_in_model_dataset": 401,
+      "count_in_streamlit_enriched": 401,
+      "uncertain_count": 0,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T10",
+      "topic_label_final": "T10. ARTS_CULTURE_ENTERTAINMENT_AND_MEDIA",
+      "count_in_master_labeled": 1875,
+      "count_in_model_dataset": 1875,
+      "count_in_streamlit_enriched": 1875,
+      "uncertain_count": 5,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T11",
+      "topic_label_final": "T11. SPORT",
+      "count_in_master_labeled": 291,
+      "count_in_model_dataset": 291,
+      "count_in_streamlit_enriched": 291,
+      "uncertain_count": 0,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T12",
+      "topic_label_final": "T12. SOCIETY",
+      "count_in_master_labeled": 215,
+      "count_in_model_dataset": 215,
+      "count_in_streamlit_enriched": 215,
+      "uncertain_count": 3,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T13",
+      "topic_label_final": "T13. HUMAN_INTEREST",
+      "count_in_master_labeled": 1131,
+      "count_in_model_dataset": 1131,
+      "count_in_streamlit_enriched": 1131,
+      "uncertain_count": 11,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T14",
+      "topic_label_final": "T14. LABOR",
+      "count_in_master_labeled": 103,
+      "count_in_model_dataset": 103,
+      "count_in_streamlit_enriched": 103,
+      "uncertain_count": 1,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T15",
+      "topic_label_final": "T15. LIFESTYLE_AND_LEISURE",
+      "count_in_master_labeled": 172,
+      "count_in_model_dataset": 172,
+      "count_in_streamlit_enriched": 172,
+      "uncertain_count": 2,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T16",
+      "topic_label_final": "T16. WORLD_INTERNATIONAL",
+      "count_in_master_labeled": 468,
+      "count_in_model_dataset": 468,
+      "count_in_streamlit_enriched": 468,
+      "uncertain_count": 0,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T17",
+      "topic_label_final": "T17. TRANSPORT_INFRASTRUCTURE",
+      "count_in_master_labeled": 319,
+      "count_in_model_dataset": 319,
+      "count_in_streamlit_enriched": 319,
+      "uncertain_count": 0,
+      "excluded_count": 0
+    },
+    {
+      "topic_label_id": "T18",
+      "topic_label_final": "T18. OTHER_UNCLEAR",
+      "count_in_master_labeled": 280,
+      "count_in_model_dataset": 0,
+      "count_in_streamlit_enriched": 0,
+      "uncertain_count": 8,
+      "excluded_count": 0
+    }
+  ],
+  "taxonomy_mapping_used": [
+    {
+      "topic_label_id": "T01",
+      "topic_label_final": "T01. POLITICS",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T02",
+      "topic_label_final": "T02. ECONOMY_BUSINESS_AND_FINANCE",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T03",
+      "topic_label_final": "T03. CRIME_LAW_AND_JUSTICE",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T04",
+      "topic_label_final": "T04. HEALTH",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T05",
+      "topic_label_final": "T05. EDUCATION",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T06",
+      "topic_label_final": "T06. SCIENCE_AND_TECHNOLOGY",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T07",
+      "topic_label_final": "T07. ENVIRONMENT",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T08",
+      "topic_label_final": "T08. WEATHER",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T09",
+      "topic_label_final": "T09. DISASTER_ACCIDENT_AND_EMERGENCY_INCIDENT",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T10",
+      "topic_label_final": "T10. ARTS_CULTURE_ENTERTAINMENT_AND_MEDIA",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T11",
+      "topic_label_final": "T11. SPORT",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T12",
+      "topic_label_final": "T12. SOCIETY",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T13",
+      "topic_label_final": "T13. HUMAN_INTEREST",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T14",
+      "topic_label_final": "T14. LABOR",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T15",
+      "topic_label_final": "T15. LIFESTYLE_AND_LEISURE",
+      "source_design_note": "IPTC"
+    },
+    {
+      "topic_label_id": "T16",
+      "topic_label_final": "T16. WORLD_INTERNATIONAL",
+      "source_design_note": "bổ sung theo VNTC/Việt Nam"
+    },
+    {
+      "topic_label_id": "T17",
+      "topic_label_final": "T17. TRANSPORT_INFRASTRUCTURE",
+      "source_design_note": "bổ sung theo đặc thù Việt Nam/Đông Nam Á"
+    },
+    {
+      "topic_label_id": "T18",
+      "topic_label_final": "T18. OTHER_UNCLEAR",
+      "source_design_note": "nhãn kỹ thuật cho caption Facebook"
+    }
+  ],
+  "metadata_coverage_summary": [
+    {
+      "metric": "total_master_rows",
+      "count": 11786,
+      "percentage": 100.0
+    },
+    {
+      "metric": "labeled_rows",
+      "count": 9202,
+      "percentage": 78.0757
+    },
+    {
+      "metric": "unlabeled_rows",
+      "count": 2584,
+      "percentage": 21.9243
+    },
+    {
+      "metric": "valid_topic_label_rows",
+      "count": 9202,
+      "percentage": 78.0757
+    },
+    {
+      "metric": "excluded_rows",
+      "count": 0,
+      "percentage": 0.0
+    },
+    {
+      "metric": "uncertain_rows",
+      "count": 45,
+      "percentage": 0.3818
+    },
+    {
+      "metric": "master_usable_for_topic_classification_rows_including_t18",
+      "count": 9202,
+      "percentage": 78.0757
+    },
+    {
+      "metric": "usable_for_topic_classification_rows",
+      "count": 8922,
+      "percentage": 75.7
+    },
+    {
+      "metric": "usable_for_reaction_analysis_rows",
+      "count": 8008,
+      "percentage": 67.945
+    },
+    {
+      "metric": "usable_for_engagement_analysis_rows",
+      "count": 7985,
+      "percentage": 67.7499
+    },
+    {
+      "metric": "usable_for_engagement_analysis_strict_rows",
+      "count": 7985,
+      "percentage": 67.7499
+    },
+    {
+      "metric": "metadata_outlier_rows",
+      "count": 38,
+      "percentage": 0.3224
+    },
+    {
+      "metric": "has_page_followers_rows",
+      "count": 11786,
+      "percentage": 100.0
+    },
+    {
+      "metric": "missing_page_followers_rows",
+      "count": 0,
+      "percentage": 0.0
+    },
+    {
+      "metric": "has_reaction_total_rows",
+      "count": 11786,
+      "percentage": 100.0
+    },
+    {
+      "metric": "has_reaction_details_rows",
+      "count": 11786,
+      "percentage": 100.0
+    },
+    {
+      "metric": "reaction_sum_mismatch_rows",
+      "count": 1945,
+      "percentage": 16.5026
+    },
+    {
+      "metric": "has_share_count_rows",
+      "count": 11786,
+      "percentage": 100.0
+    },
+    {
+      "metric": "has_comment_count_rows",
+      "count": 11786,
+      "percentage": 100.0
+    },
+    {
+      "metric": "has_post_created_time_rows",
+      "count": 8560,
+      "percentage": 72.6285
+    },
+    {
+      "metric": "timestamp_ok_rows",
+      "count": 8560,
+      "percentage": 72.6285
+    },
+    {
+      "metric": "timestamp_missing_rows",
+      "count": 3226,
+      "percentage": 27.3715
+    },
+    {
+      "metric": "timestamp_invalid_rows",
+      "count": 0,
+      "percentage": 0.0
+    },
+    {
+      "metric": "pilot_exclude_from_test_rows",
+      "count": 600,
+      "percentage": 5.0908
+    },
+    {
+      "metric": "t18_rows_in_master",
+      "count": 280,
+      "percentage": 2.3757
+    },
+    {
+      "metric": "t18_excluded_rows",
+      "count": 0,
+      "percentage": 0.0
+    },
+    {
+      "metric": "t18_removed_from_model_dataset",
+      "count": 280,
+      "percentage": 2.3757
+    },
+    {
+      "metric": "t18_removed_from_streamlit_enriched",
+      "count": 280,
+      "percentage": 2.3757
+    }
+  ],
+  "output_file_row_counts": [
+    {
+      "File": "Master_Facebook_News_Posts_TeamCrawl_Labeled.csv",
+      "Mục đích": "Master giữ schema gốc, đã join label và cập nhật flags/metrics",
+      "Số dòng dữ liệu": 11786,
+      "Số dòng file nếu tính header": 11787,
+      "Số cột": 92
+    },
+    {
+      "File": "Topic_Classification_Model_Dataset.csv",
+      "Mục đích": "Dataset train topic classification cho Hân",
+      "Số dòng dữ liệu": 8922,
+      "Số dòng file nếu tính header": 8923,
+      "Số cột": 4
+    },
+    {
+      "File": "Public_Response_Streamlit_Enriched.csv",
+      "Mục đích": "Dataset enriched cho Streamlit dashboard của Yến",
+      "Số dòng dữ liệu": 8922,
+      "Số dòng file nếu tính header": 8923,
+      "Số cột": 71
+    },
+    {
+      "File": "Pilot_Record_IDs_Exclude_From_Test.csv",
+      "Mục đích": "Danh sách record pilot/calibration loại khỏi test",
+      "Số dòng dữ liệu": 600,
+      "Số dòng file nếu tính header": 601,
+      "Số cột": 6
+    },
+    {
+      "File": "missing_followers_by_page.csv",
+      "Mục đích": "Report page thiếu follower",
+      "Số dòng dữ liệu": 17,
+      "Số dòng file nếu tính header": 18,
+      "Số cột": 10
+    },
+    {
+      "File": "metadata_outlier_report.csv",
+      "Mục đích": "Report metadata outlier theo từng rule",
+      "Số dòng dữ liệu": 63,
+      "Số dòng file nếu tính header": 64,
+      "Số cột": 13
+    },
+    {
+      "File": "label_join_conflicts.csv",
+      "Mục đích": "Report conflict/invalid label/join issue",
+      "Số dòng dữ liệu": 2715,
+      "Số dòng file nếu tính header": 2716,
+      "Số cột": 6
+    },
+    {
+      "File": "label_distribution.csv",
+      "Mục đích": "Phân phối nhãn theo topic",
+      "Số dòng dữ liệu": 18,
+      "Số dòng file nếu tính header": 19,
+      "Số cột": 7
+    },
+    {
+      "File": "metadata_coverage_summary.csv",
+      "Mục đích": "Coverage metadata và usable flags",
+      "Số dòng dữ liệu": 28,
+      "Số dòng file nếu tính header": 29,
+      "Số cột": 3
+    },
+    {
+      "File": "taxonomy_mapping_used.csv",
+      "Mục đích": "Mapping taxonomy chính thức đã dùng",
+      "Số dòng dữ liệu": 18,
+      "Số dòng file nếu tính header": 19,
+      "Số cột": 3
+    },
+    {
+      "File": "Final_Master_Data_Statistics.json",
+      "Mục đích": "Thống kê kỹ thuật dạng JSON",
+      "Số dòng dữ liệu": 1,
+      "Số dòng file nếu tính header": "N/A",
+      "Số cột": 1
+    },
+    {
+      "File": "Final_Master_Data_Technical_Report.md",
+      "Mục đích": "Báo cáo kỹ thuật tiếng Việt",
+      "Số dòng dữ liệu": 1,
+      "Số dòng file nếu tính header": "N/A",
+      "Số cột": 1
+    }
+  ],
+  "missing_followers_by_page_top_20": [
+    {
+      "page_name": "Tuổi Trẻ",
+      "page_handle": "baotuoitre",
+      "page_url": "https://www.facebook.com/baotuoitre",
+      "total_posts": 1274,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 1274,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 869,
+      "usable_for_engagement_analysis_count": 869,
+      "example_post_url": "https://www.facebook.com/baotuoitre/posts/pfbid023SYXWNQk7QWj18ryop3NZPBw3HA9ADcMXWoQs2xaERGDz7hrbJRJxN5J8LiPuxVBl"
+    },
+    {
+      "page_name": "Kenh14.vn",
+      "page_handle": "K14vn",
+      "page_url": "https://www.facebook.com/K14vn/",
+      "total_posts": 1145,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 1145,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 852,
+      "usable_for_engagement_analysis_count": 851,
+      "example_post_url": "https://www.facebook.com/K14vn/posts/1451759843651677"
+    },
+    {
+      "page_name": "Dân trí",
+      "page_handle": "baodantridientu",
+      "page_url": "https://www.facebook.com/baodantridientu",
+      "total_posts": 1000,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 1000,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 834,
+      "usable_for_engagement_analysis_count": 834,
+      "example_post_url": "https://www.facebook.com/baodantridientu/posts/pfbid02oZt7EBhpwHFcwhsNMrgek8vkTwhkZcJVmzYxoRs3wQnfn1RaLhzzFnd3iPUbsLGcl"
+    },
+    {
+      "page_name": "VnExpress.net",
+      "page_handle": "congdongvnexpress",
+      "page_url": "https://www.facebook.com/congdongvnexpress",
+      "total_posts": 999,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 999,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 820,
+      "usable_for_engagement_analysis_count": 820,
+      "example_post_url": "https://www.facebook.com/congdongvnexpress/posts/pfbid02qSsaPyehmYdWY8MZMUveejvXR7vkbBvhXw3n1hP33eLGQfNKty4HKvuzXrpp2d2Al"
+    },
+    {
+      "page_name": "Tin tức VTV24",
+      "page_handle": "tintucvtv24",
+      "page_url": "https://www.facebook.com/tintucvtv24",
+      "total_posts": 994,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 994,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 796,
+      "usable_for_engagement_analysis_count": 790,
+      "example_post_url": "https://www.facebook.com/reel/1390504153217813"
+    },
+    {
+      "page_name": "YAN News",
+      "page_handle": "yannews",
+      "page_url": "https://www.facebook.com/yannews",
+      "total_posts": 1002,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 1002,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 765,
+      "usable_for_engagement_analysis_count": 757,
+      "example_post_url": "https://www.facebook.com/reel/974266688639541"
+    },
+    {
+      "page_name": "Vietnamnet.vn",
+      "page_handle": "vietnamnet.vn",
+      "page_url": "https://www.facebook.com/vietnamnet.vn",
+      "total_posts": 870,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 870,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 465,
+      "usable_for_engagement_analysis_count": 465,
+      "example_post_url": "https://www.facebook.com/vietnamnet.vn/posts/pfbid0cVQCXan4SuSpowdxUQNeNQqSRkefrrEHfkSkf6DAgVG2M4pU5efYP1GM6TTw8WVKl"
+    },
+    {
+      "page_name": "Schannel",
+      "page_handle": "schannel.vn",
+      "page_url": "https://www.facebook.com/schannel.vn",
+      "total_posts": 994,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 994,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 447,
+      "usable_for_engagement_analysis_count": 443,
+      "example_post_url": "https://www.facebook.com/schannel.vn/posts/pfbid0NNyonno1FGUgkodS1a15piEqoJdaJpLozyJLaSioPsyB3j71D8Sn8LazBzZXMnFxl"
+    },
+    {
+      "page_name": "Theanh28 Entertainment",
+      "page_handle": "Theanh28",
+      "page_url": "https://www.facebook.com/Theanh28",
+      "total_posts": 543,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 543,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 427,
+      "usable_for_engagement_analysis_count": 427,
+      "example_post_url": "https://www.facebook.com/Theanh28/posts/1312885634359869"
+    },
+    {
+      "page_name": "CafeBiz",
+      "page_handle": "cafebiz.vn",
+      "page_url": "https://www.facebook.com/cafebiz.vn",
+      "total_posts": 729,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 729,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 410,
+      "usable_for_engagement_analysis_count": 408,
+      "example_post_url": "https://www.facebook.com/reel/1500708281598079"
+    },
+    {
+      "page_name": "Weibo Việt Nam",
+      "page_handle": "weibovietnam",
+      "page_url": "https://www.facebook.com/weibovietnam",
+      "total_posts": 712,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 712,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 383,
+      "usable_for_engagement_analysis_count": 383,
+      "example_post_url": "https://www.facebook.com/weibovietnam/posts/pfbid0BebJd2CWJtVbri66hkrQBcF9Qi9zCpA3383PVoUg6H7kmqysWm5LNqJbaEBrVqVrl"
+    },
+    {
+      "page_name": "Đài Phát Thanh.",
+      "page_handle": "daiphatthanh.sound",
+      "page_url": "https://www.facebook.com/daiphatthanh.sound",
+      "total_posts": 431,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 431,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 334,
+      "usable_for_engagement_analysis_count": 334,
+      "example_post_url": "https://www.facebook.com/daiphatthanh.sound/posts/1566547078171008"
+    },
+    {
+      "page_name": "Tin tức CAND",
+      "page_handle": "tintuccand",
+      "page_url": "https://www.facebook.com/tintuccand",
+      "total_posts": 400,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 400,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 190,
+      "usable_for_engagement_analysis_count": 190,
+      "example_post_url": "https://www.facebook.com/tintuccand/posts/pfbid02SE6WprTWKC7G1RBKCWmrb4UX1dcx7r9y1E5Xezas8pDhpZCGUEUiMG1GVoa6V8ZAl"
+    },
+    {
+      "page_name": "Đại biểu Nhân dân",
+      "page_handle": "daibieunhandan.vn",
+      "page_url": "https://www.facebook.com/daibieunhandan.vn",
+      "total_posts": 400,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 400,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 189,
+      "usable_for_engagement_analysis_count": 188,
+      "example_post_url": "https://www.facebook.com/daibieunhandan.vn/posts/pfbid0ARw7P8XRVRgYGWPxYqRvZUtnsDETLrifF2FFZpjnmZcrVvD4UQ5QmrtVAETdq3Q5l"
+    },
+    {
+      "page_name": "Người Lao Động",
+      "page_handle": "nguoilaodong",
+      "page_url": "https://www.facebook.com/nguoilaodong",
+      "total_posts": 122,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 122,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 95,
+      "usable_for_engagement_analysis_count": 95,
+      "example_post_url": "https://www.facebook.com/nguoilaodong/posts/1548303209995354"
+    },
+    {
+      "page_name": "Cục Cảnh sát điều tra tội phạm về ma tuý",
+      "page_handle": "Canhsatdieutratoiphammatuy",
+      "page_url": "https://www.facebook.com/Canhsatdieutratoiphammatuy",
+      "total_posts": 114,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 114,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 85,
+      "usable_for_engagement_analysis_count": 85,
+      "example_post_url": "https://www.facebook.com/Canhsatdieutratoiphammatuy/posts/122200625588476361"
+    },
+    {
+      "page_name": "Thông tin Chính phủ",
+      "page_handle": "thongtinchinhphu",
+      "page_url": "https://www.facebook.com/thongtinchinhphu",
+      "total_posts": 57,
+      "missing_page_followers_count": 0,
+      "has_page_followers_count": 57,
+      "missing_page_followers_rate": 0.0,
+      "usable_for_reaction_analysis_count": 47,
+      "usable_for_engagement_analysis_count": 46,
+      "example_post_url": "https://www.facebook.com/thongtinchinhphu/posts/pfbid02RGwhe337oqCbW2gi1tB4rJ9sLV7CYcbJRFThk37ac33ht84WyLJgyKD4q4TPm3YMl"
+    }
+  ],
+  "metadata_outlier_report_top_20": [
+    {
+      "record_id": "REC_003600",
+      "page_name": "Tin tức VTV24",
+      "post_url": "https://www.facebook.com/reel/1683446546131420",
+      "caption": "Từ loại trái cây từng có giá cao, sầu riêng đang trở thành nỗi lo của nhiều nhà vườn khi giá bán xuống thấp. Tình trạng này cũng đặt ra bài học về phát triển diện tích tự phát và nguy cơ vượt cung với nông sản.",
+      "column_name": "comment_count",
+      "value": 100000.0,
+      "total_reactions": 29082,
+      "comment_count": 100000,
+      "share_count": 1300,
+      "page_followers": 10000000,
+      "engagement_total": 130382,
+      "engagement_per_follower": 0.0130382,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_003731",
+      "page_name": "Tin tức VTV24",
+      "post_url": "https://www.facebook.com/reel/1710894580089866",
+      "caption": "Việc điều chỉnh ngưỡng doanh thu chịu thuế lên 1 tỷ đồng đang nhận được sự đồng thuận từ các cá nhân, hộ kinh doanh, khi được kỳ vọng giúp giảm áp lực chi phí và phản ánh sát hơn thu nhập thực tế.",
+      "column_name": "comment_count",
+      "value": 1000000.0,
+      "total_reactions": 11329,
+      "comment_count": 1000000,
+      "share_count": 452,
+      "page_followers": 10000000,
+      "engagement_total": 1011781,
+      "engagement_per_follower": 0.1011781,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_004354",
+      "page_name": "YAN News",
+      "post_url": "https://www.facebook.com/yannews/posts/pfbid0uCy2mAPtzkEvJDN8QzAAKz5nfUPCpLMdqgjbnicA98XbAD8zgv8CafL168zwHi9el",
+      "caption": "Cô gái Nga làm việc tại Việt Nam yêu chàng trai Việt Nam làm việc tại Ukraine, sau đó cả 2 đã quyết định về Việt Nam sinh sống",
+      "column_name": "comment_count",
+      "value": 2018000.0,
+      "total_reactions": 1029,
+      "comment_count": 2018000,
+      "share_count": 6,
+      "page_followers": 21000000,
+      "engagement_total": 2019035,
+      "engagement_per_follower": 0.0961445238,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_004470",
+      "page_name": "YAN News",
+      "post_url": "https://www.facebook.com/reel/1502228057916384",
+      "caption": "Trạng thái đối lập của mẹ vợ - mẹ ruột của Tôn Bằng trên bàn ăn: Phụ huynh của vợ bị nhận nhầm thành bảo mẫu",
+      "column_name": "comment_count",
+      "value": 2000000.0,
+      "total_reactions": 1220,
+      "comment_count": 2000000,
+      "share_count": 7,
+      "page_followers": 21000000,
+      "engagement_total": 2001227,
+      "engagement_per_follower": 0.0952965238,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_004573",
+      "page_name": "YAN News",
+      "post_url": "https://www.facebook.com/reel/4474657849481237",
+      "caption": "Nữ tóp tóp cơ makeup giữa sân banh gây tranh cãi",
+      "column_name": "comment_count",
+      "value": 1000000.0,
+      "total_reactions": 735,
+      "comment_count": 1000000,
+      "share_count": 8,
+      "page_followers": 21000000,
+      "engagement_total": 1000743,
+      "engagement_per_follower": 0.0476544286,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_004588",
+      "page_name": "YAN News",
+      "post_url": "https://www.facebook.com/reel/1171476698410473",
+      "caption": "Quán ăn nổi tiếng miền Tây gây tranh cãi vì giá cao",
+      "column_name": "comment_count",
+      "value": 400000.0,
+      "total_reactions": 120,
+      "comment_count": 400000,
+      "share_count": 6,
+      "page_followers": 21000000,
+      "engagement_total": 400126,
+      "engagement_per_follower": 0.019053619,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_004621",
+      "page_name": "YAN News",
+      "post_url": "https://www.facebook.com/reel/935843632608095",
+      "caption": "CĐM rộ nghi vấn Khả Như đang mang bầu được 3 tháng",
+      "column_name": "comment_count",
+      "value": 3000000.0,
+      "total_reactions": 11367,
+      "comment_count": 3000000,
+      "share_count": 21,
+      "page_followers": 21000000,
+      "engagement_total": 3011388,
+      "engagement_per_follower": 0.1433994286,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_004648",
+      "page_name": "YAN News",
+      "post_url": "https://www.facebook.com/yannews/posts/pfbid02teK3qLq7ymf7MMdN4rF7dgLraAwLGdD1ypmVn9YWmXMi7PhumvzQmrq4uGuwhdkEl",
+      "caption": "Tin vui cho bé trai 2 tuổi bị baohanh: Em đã xuất viện và được bảo vệ an toàn",
+      "column_name": "comment_count",
+      "value": 2000000.0,
+      "total_reactions": 436,
+      "comment_count": 2000000,
+      "share_count": 4,
+      "page_followers": 21000000,
+      "engagement_total": 2000440,
+      "engagement_per_follower": 0.0952590476,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_005005",
+      "page_name": "YAN News",
+      "post_url": "https://www.facebook.com/reel/1879499249420448",
+      "caption": "Bạn thân CiiN ăn 500K ở Dubai, CĐM thấy khắc khổ",
+      "column_name": "comment_count",
+      "value": 1000000.0,
+      "total_reactions": 336,
+      "comment_count": 1000000,
+      "share_count": 3,
+      "page_followers": 21000000,
+      "engagement_total": 1000339,
+      "engagement_per_follower": 0.0476351905,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_005101",
+      "page_name": "YAN News",
+      "post_url": "https://www.facebook.com/reel/1768395097287071",
+      "caption": "Gái Thái sốc khi quen hồng hài nhi Việt bên ngoài điển trai bên trong \"ở dơ\"",
+      "column_name": "comment_count",
+      "value": 1000000.0,
+      "total_reactions": 372,
+      "comment_count": 1000000,
+      "share_count": 7,
+      "page_followers": 21000000,
+      "engagement_total": 1000379,
+      "engagement_per_follower": 0.0476370952,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_005355",
+      "page_name": "CafeBiz",
+      "post_url": "https://www.facebook.com/reel/1906746597380417",
+      "caption": "Các bác ra giá mấy triệu/m?",
+      "column_name": "comment_count",
+      "value": 1000000.0,
+      "total_reactions": 240,
+      "comment_count": 1000000,
+      "share_count": 1,
+      "page_followers": 1900000,
+      "engagement_total": 1000241,
+      "engagement_per_follower": 0.5264426316,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_005904",
+      "page_name": "CafeBiz",
+      "post_url": "https://www.facebook.com/cafebiz.vn/posts/pfbid02SduPiGdUYEPHq25wpw6n5FUUwhHxTqJjwbDdU1mUMTbZmXtXPZWijMsK79aLp5sdl",
+      "caption": "Elon Musk tiết lộ chấn động: Giấc mơ đưa 1 triệu người lên Sao Hỏa của ông được nuôi bằng nghề bán wifi",
+      "column_name": "comment_count",
+      "value": 1000000.0,
+      "total_reactions": 85,
+      "comment_count": 1000000,
+      "share_count": 2,
+      "page_followers": 1900000,
+      "engagement_total": 1000087,
+      "engagement_per_follower": 0.5263615789,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_006297",
+      "page_name": "Schannel",
+      "post_url": "https://www.facebook.com/schannel.vn/posts/pfbid0mWWybbbdBFxDBmVm81NQF36p4kNtv4UpWubykTktQVB13sV4JBJFqN87G9bsGGzDl",
+      "caption": "NHANH CHÓNG BẮT GIỮ ĐỐI TƯỢNG DÙNG ĐE DOẠ HAI VỢ CHỒNG TẠI BẾN CHỜ XE BUÝT, ÉP TRẢ THÊM TIỀN XE ÔM --- Trước đó, tối qua, mạng xã hội lan truyền video ghi lại cảnh một đối tượng dùng đe dọa, ép hai vợ chồng trả 700.000 đồng tiền xe ôm khi đi từ bến xe Mỹ Đình đến khu vực bến Bầu, xã Thiên Lộc, TP Hà Nội. Xác định TÍNH CHẤT NGHIÊM TRỌNG của sự việc, Giám đốc CATP đã chỉ đạo các đơn vị nghiệp vụ khẩn trương điều tra, xác minh, làm rõ đối tượng để xử lý theo quy định pháp luật. Đến 9h30' ngày 8/5/2026, Phòng Cảnh sát hình sự phối hợp Công an xã Thiên Lộc đã bắt giữ được đối tượng gây ra vụ việc Nguyễn Lê Khôi (SN 1996; trú tại; xã Triệu Việt Vương, tỉnh Hưng Yên). Bước đầu xác định, khoảng 18h30' ngày 7/5/2026, chị T (SN 1996; trú tại: tỉnh Lai Châu) cùng chồng đến Bến xe Mỹ Đình để bắt xe về Lai Châu. Khi đến khu vực cổng Bến xe Mỹ Đình, vợ chồng chị T đi xe ôm sang bến Bầu, xã Thiên Lộc để bắt xe khách về Lai Châu. Khi đến bến Bầu mặc dù chị T đã thanh toán 500.000 đồng tiền xe ôm của cả 2 vợ chồng nhưng Khôi không đồng ý mà đòi trả thêm 200.000 đồng. Vợ chồng chị T không đưa tiền thì Khôi lấy dí vào cổ chồng chị T đe doạ. Do hoảng sợ nên chị T đã đưa 200.000 đồng cho đối tượng. Theo hồ sơ, Nguyễn Lê Khôi từng có 1 tiền án về tội Tàng trữ trái phép chất ma tuý. Hiện, Phòng Cảnh sát hình sự Công an Thành phố đang khẩn trương điều tra, củng cố hồ sơ để xử lý Khôi và những người liên quan đến vụ việc theo quy định pháp luật. Theo: Thông tin Chính Phủ",
+      "column_name": "comment_count",
+      "value": 200000.0,
+      "total_reactions": 144,
+      "comment_count": 200000,
+      "share_count": 2,
+      "page_followers": 1200000,
+      "engagement_total": 200146,
+      "engagement_per_follower": 0.1667883333,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_006301",
+      "page_name": "Schannel",
+      "post_url": "https://www.facebook.com/schannel.vn/posts/pfbid02iBDP8RBGh64ZqujD2BwLih4eFHNqZwLme8VbQuBRShnqeEGDpYHXwaKy5ft27HVBl",
+      "caption": "Hàng loạt ngành học được miễn 100% học phí năm 2026",
+      "column_name": "comment_count",
+      "value": 2026000.0,
+      "total_reactions": 799,
+      "comment_count": 2026000,
+      "share_count": 12,
+      "page_followers": 1200000,
+      "engagement_total": 2026811,
+      "engagement_per_follower": 1.6890091667,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_006616",
+      "page_name": "Schannel",
+      "post_url": "https://www.facebook.com/schannel.vn/posts/pfbid02sRKuKKAv4RHcFFb9p9fzhos5NzzKdhgtW4raLbHTPnV4uaauEF3a263fnntE5i6ql",
+      "caption": "Tổng Bí thư, Chủ tịch nước Tô Lâm dâng hương tưởng niệm các Vua Hùng Sáng 26/4 (mùng 10/3 Âm lịch), Tổng Bí thư, Chủ tịch nước Tô Lâm cùng các lãnh đạo, nguyên lãnh đạo Đảng nhà nước khởi hành lên núi Nghĩa Lĩnh để dâng hương tưởng niệm các Vua Hùng. Theo: TTXVN",
+      "column_name": "comment_count",
+      "value": 4000000.0,
+      "total_reactions": 1200,
+      "comment_count": 4000000,
+      "share_count": 2,
+      "page_followers": 1200000,
+      "engagement_total": 4001202,
+      "engagement_per_follower": 3.334335,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_007352",
+      "page_name": "Schannel",
+      "post_url": "https://www.facebook.com/schannel.vn/posts/pfbid0dNwxeUenUkN8V6tvjabVkRGtGTDEgv3hpuqEoQvfVbPSQyNnaSJ9sjXBC9U6haRNl",
+      "caption": "K26 xôm tụ xôm tụ rồi đây!!! Thêm 5 hồ sơ “nhập học” tiếp theo: Anh Tài Thái VG Anh Tài Trịnh Thăng Bình Anh Tài It's CHARLES. Anh Tài Cheng Anh Tài 14 Casper Rap, hát, sáng tác đủ cả luôn!!!",
+      "column_name": "comment_count",
+      "value": 3000000.0,
+      "total_reactions": 1200,
+      "comment_count": 3000000,
+      "share_count": 3,
+      "page_followers": 1200000,
+      "engagement_total": 3001203,
+      "engagement_per_follower": 2.5010025,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_009688",
+      "page_name": "Weibo Việt Nam",
+      "post_url": "https://www.facebook.com/weibovietnam/posts/pfbid02k8Md9citKb3AJhn4DyLKFu3PBfuRdTaFRF3FSxkZ43vULDnLXZv3Tsi5rVUg5sM1l",
+      "caption": "Cách chúng ta đọc truyện và comment đoạn vào năm 2036 nếu app cam tiếp tục xoá truyện nữa",
+      "column_name": "comment_count",
+      "value": 2036000.0,
+      "total_reactions": 4300,
+      "comment_count": 2036000,
+      "share_count": 207,
+      "page_followers": 2300000,
+      "engagement_total": 2040507,
+      "engagement_per_follower": 0.8871769565,
+      "reason": "comment_count >= 100000"
+    },
+    {
+      "record_id": "REC_000008",
+      "page_name": "Thông tin Chính phủ",
+      "post_url": "https://www.facebook.com/reel/670744189467522",
+      "caption": "Nhiều người vì tin bạn bè, người quen hoặc ham tiền công cao mà nhận “xách hộ”, “ship hộ” hàng hóa không rõ nguồn gốc. Nhưng khi bị phát hiện, cái giá phải trả không chỉ là án tù… mà còn là tương lai, gia đình và cả cuộc đời phía trước. Đừng nghĩ “xách hộ, ship hộ” là vô can. Một phút chủ quan có thể đánh đổi bằng cả cuộc đời. Theo Luật số 86/2025/QH15 sửa đổi, bổ sung một số điều của Bộ luật Hình sự, tội vận chuyển trái phép chất ma túy có thể bị phạt tù từ 3 năm đến chung thân. ----- Video minh họa nhằm mục đích tuyên truyền pháp luật",
+      "column_name": "share_count",
+      "value": 1300000.0,
+      "total_reactions": 23357,
+      "comment_count": 1700,
+      "share_count": 1300000,
+      "page_followers": 9400000,
+      "engagement_total": 1325057,
+      "engagement_per_follower": 0.1409635106,
+      "reason": "share_count >= 100000"
+    },
+    {
+      "record_id": "REC_009871",
+      "page_name": "Weibo Việt Nam",
+      "post_url": "https://www.facebook.com/vitaminhaiphong/posts/pfbid02G3AEUDazuPdwyix76wWydVM3x3VtXTqWVibqF5dCS8CJMoRtaQVaZPL6xZmHNxjtl",
+      "caption": "Nữ giáo viên mang lên lớp và yêu cầu học sinh tự ch-í-ch phân trần mục đích là “răn đe” khi các em không ngoan.",
+      "column_name": "share_count",
+      "value": 3000000.0,
+      "total_reactions": 590,
+      "comment_count": 94,
+      "share_count": 3000000,
+      "page_followers": 2300000,
+      "engagement_total": 3000684,
+      "engagement_per_follower": 1.3046452174,
+      "reason": "share_count >= 100000"
+    },
+    {
+      "record_id": "REC_000567",
+      "page_name": "Tin tức CAND",
+      "post_url": "https://www.facebook.com/reel/1440543443977327",
+      "caption": "Vẫn là anh Công an xã và em trai \"hay vi phạm giao thông\" đến từ A Lưới 1.... An toàn giao thông là hạnh phúc của mọi người, mọi nhà!!!",
+      "column_name": "total_reactions",
+      "value": 183262.0,
+      "total_reactions": 183262,
+      "comment_count": 1300,
+      "share_count": 1800,
+      "page_followers": 1300000,
+      "engagement_total": 186362,
+      "engagement_per_follower": 0.1433553846,
+      "reason": "total_reactions >= 100000"
+    }
+  ],
+  "created_columns": [
+    "has_metadata_outlier",
+    "metadata_outlier_reason",
+    "usable_for_engagement_analysis_strict"
+  ],
+  "warnings": []
+}

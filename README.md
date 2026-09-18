@@ -1,88 +1,174 @@
-# University of Information Technology, Vietnam National University Ho Chi Minh City (UIT)
+# DS107 - Nhóm 12: Code Submission
 
-**Project:** Vietnamese Facebook News Classification and User Reaction Analysis: An Engagement Metadata Approach  
-**Field:** Social Media Data Mining and Natural Language Processing (NLP)
+**Tên đề tài:** Xây dựng bộ dữ liệu, mô hình phân loại chủ đề và phân tích phản ứng người dùng đối với bài đăng có liên quan đến tin tức trên mạng xã hội Việt Nam.  
+**Môn học:** DS107 - Tư duy tính toán cho khoa học dữ liệu.  
+**GVHD:** TS Nguyễn Văn Kiệt, CN. Trần Quốc Khánh.  
+**Nhóm thực hiện:** Nhóm 12.
 
----
+## 1. Mục tiêu gói nộp
 
-## Tech Stack
+Gói `DS107_Nhom12_Code.zip` cung cấp mã nguồn và các dữ liệu/artifact nhẹ để giảng viên có thể kiểm tra, cài đặt môi trường và chạy lại demo Streamlit của dự án.
 
-The project uses Python and the following tools:
+Các phần chính trong gói nộp:
 
-- **Data processing:** `Pandas`, `NumPy`
-- **Language modeling:** `PyTorch`, `PhoBERT`
-- **Interactive dashboard:** `Streamlit`
+- Mã nguồn crawl bài đăng Facebook công khai.
+- Mã nguồn xây dựng master dataset, tạo dữ liệu cuối, chia train/validation/test.
+- Mã nguồn kiểm tra độ đồng thuận gán nhãn (IAA).
+- Mã nguồn huấn luyện và tổng hợp kết quả traditional ML.
+- Dashboard Streamlit mới tại `src/dashboard/`.
+- Các báo cáo, bảng kết quả và dữ liệu đầu ra đã chọn trong `data_outputs/` và `docs/`.
 
----
+Các trọng số mô hình lớn (`*.joblib`, `*.safetensors`, `*.pt`, `*.bin`) không được đóng gói trong file code zip. Nếu cần chạy đầy đủ phần dự đoán mô hình ở dashboard, vui lòng dùng thêm file model artifact nộp riêng.
 
-## 1. Overview
-
-This document describes the structure, size, and schema of the dataset used in the media trend analysis project.
-
-The project follows a **post-centric approach** and uses a **single source of truth (SSOT)** for its data. Comment records are excluded so that the classification model uses original posts rather than comments. The resulting **Golden Dataset** links post text and topic labels with engagement metadata.
-
----
-
-## 2. Project Directory Structure
+## 2. Cấu trúc thư mục
 
 ```text
-DS107_Repo/
-├── data/
-│   ├── csv-data(labeled)/     Labeled data, including train.csv and test.csv
-│   ├── json-crawl-data/       Raw Facebook metadata in JSON files
-│   ├── Processed_Data/        Master_Data_Raw.csv with 2,077 matched records
-│   └── .gitkeep
-├── notebooks/                 Experimental Jupyter notebooks
-├── src/                       Python source code
-├── dashboard/                 Streamlit dashboard
-├── .gitignore                 Rules for excluding large data and cache files
-├── CONTRIBUTING.md            Contribution guidelines and team Git workflow
-├── requirements.txt           Project dependencies
-└── README.md                  Golden Dataset documentation
+DS107_Nhom12_Code/
+├── README.md
+├── requirements.txt
+├── requirements_modeling.txt
+├── CHECKLIST_STATUS.md
+├── configs/
+│   └── crawl_config.example.json
+├── data_outputs/
+│   ├── 02_master_dataset/
+│   ├── 06_final_master_data/
+│   ├── 07_cleaned_splits/
+│   └── 08_modeling_results/
+├── data_samples/
+├── docs/
+├── logs/
+└── src/
+    ├── crawl/
+    ├── dataset/
+    ├── iaa/
+    ├── training/
+    │   └── traditional_ml/
+    └── dashboard/
+        ├── app.py
+        ├── components/
+        ├── data_loader.py
+        ├── visolex_normalizer.py
+        ├── viz_theme.py
+        ├── config.json
+        ├── Public_Response_Streamlit_Enriched.csv
+        ├── taxonomy_mapping_used.csv
+        ├── data/
+        │   └── visolex_dictionary.json
+        └── 08_Modeling_Results/
 ```
 
-## 3. Data Volume and Statistics
+## 3. Cài đặt môi trường
 
-The data was filtered to remove duplicate, irrelevant, and unmatched records.
+Khuyến nghị dùng Python 3.9 trở lên.
 
-| Processing stage | Records | Description |
-| :--- | ---: | :--- |
-| Initial data | 2,796 | Raw records containing both posts and comments |
-| After deduplication | 2,794 | Duplicate content removed |
-| After record-type filtering | 2,634 | 160 comment records removed; original posts retained |
-| Golden Dataset after mapping | 2,077 | Original posts successfully matched with JSON metadata |
+```bash
+cd DS107_Nhom12_Code
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
 
-The 2,077 records in this Golden Dataset have five topic labels:
+Trên Windows:
 
-- Social News
-- Sports
-- Slang & Memes
-- Movies
-- Music
+```bash
+cd DS107_Nhom12_Code
+python -m venv .venv
+.venv\Scripts\activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
 
-## 4. Data Schema
+Nếu cần chạy crawler bằng Playwright:
 
-The dataset combines fields from two sources.
+```bash
+python -m playwright install chromium
+```
 
-### 4.1. CSV Data: Topic Labels
+## 4. Chạy demo dashboard
 
-- **`content`:** Raw post text used to match records across the two sources.
-- **`label_from_content`:** Human-assigned topic label.
-- **`comment_ids`:** A field used to distinguish original posts from comment records.
+Dashboard Streamlit mới nằm trong `src/dashboard/`.
 
-### 4.2. JSON Data: Engagement Metadata
+```bash
+cd src/dashboard
+streamlit run app.py
+```
 
-- **`post_content`:** Post text matched against the CSV `content` field.
-- **`creation_time`:** Publication time, normalized to a datetime value in UTC+7.
-- **`share_count`:** Number of shares, converted to a numeric value.
-- **`reactions_detail`:** Reaction counts expanded into separate fields: `like`, `love`, `haha`, `wow`, `sad`, `angry`, and `care`.
+Sau khi khởi chạy, Streamlit sẽ in ra địa chỉ local, thường là:
 
-## 5. Data Mapping
+```text
+http://localhost:8501
+```
 
-Because the CSV and JSON sources do not share consistent record IDs, the project matches records by post text:
+Dashboard đã có sẵn các file dữ liệu cần thiết để chạy phần trực quan hóa:
 
-1. Extract text from `content` in the CSV files and `post_content` in the JSON files.
-2. Remove extra spaces, tabs, and line breaks, then convert the text to lowercase to create a normalized matching key.
-3. Perform an inner join using that key. Exclude posts whose text cannot be matched reliably because of truncation or encoding differences.
+```text
+src/dashboard/Public_Response_Streamlit_Enriched.csv
+src/dashboard/taxonomy_mapping_used.csv
+src/dashboard/data/visolex_dictionary.json
+```
 
-The resulting Golden Dataset contains **2,077 matched post records**.
+Các tab tổng quan, phân tích rủi ro, phân tích phản ứng người dùng và các biểu đồ dữ liệu có thể chạy ngay sau khi cài đặt requirements.
+
+Quy trình tái lập demo nhanh cho giảng viên:
+
+1. Giải nén `DS107_Nhom12_Code.zip`.
+2. Tạo môi trường ảo và cài `requirements.txt`.
+3. Nếu cần demo đầy đủ mô hình dự đoán, giải nén thêm model artifact nộp riêng vào project root.
+4. Chạy dashboard bằng lệnh `streamlit run app.py` trong thư mục `src/dashboard/`.
+
+## 5. Khôi phục model artifact để chạy đầy đủ Tab AI Content Simulator
+
+Do dung lượng lớn, code zip không kèm trọng số traditional ML và checkpoint Transformer. Để chạy đầy đủ phần dự đoán mô hình trong dashboard, giải nén file model artifact nộp riêng vào đúng thư mục gốc của project sao cho tồn tại đường dẫn:
+
+```text
+src/dashboard/08_Modeling_Results/
+```
+
+Cấu trúc model artifact kỳ vọng:
+
+```text
+src/dashboard/08_Modeling_Results/traditional_ml_hpo_deep/
+src/dashboard/08_Modeling_Results/phobert_kb4_best_model/
+src/dashboard/08_Modeling_Results/xlmr_best_model_kb5/
+src/dashboard/08_Modeling_Results/mbert_best_model_kb4/
+```
+
+Nếu chưa khôi phục model artifact, dashboard vẫn chạy được các phần phân tích dữ liệu. Riêng thao tác dự đoán bằng mô hình sẽ hiện thông báo thiếu trọng số/checkpoint và hướng dẫn vị trí đặt file.
+
+## 6. Chạy lại một số bước xử lý dữ liệu và mô hình
+
+Tạo lại các split train/validation/test:
+
+```bash
+python src/dataset/create_train_val_test_splits.py
+```
+
+Kiểm tra IAA:
+
+```bash
+python src/iaa/verify_iaa.py
+```
+
+Kiểm tra dữ liệu đầu vào cho traditional ML:
+
+```bash
+python src/training/traditional_ml/train_traditional_models.py --validate_only
+```
+
+Train nhanh traditional ML baseline:
+
+```bash
+python src/training/traditional_ml/train_traditional_models.py --tuning_mode fast
+```
+
+Kết quả, báo cáo và log đã chọn được lưu sẵn trong:
+
+```text
+data_outputs/
+docs/
+logs/
+```
+
+Gói nộp không bao gồm môi trường ảo, cookie, token, browser profile, raw crawl folder đầy đủ hoặc trọng số mô hình lớn trong code zip.

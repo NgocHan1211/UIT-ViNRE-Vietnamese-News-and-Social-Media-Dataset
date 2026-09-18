@@ -1,0 +1,444 @@
+{
+  "random_state": 42,
+  "scenarios": [
+    "01_Raw_Data",
+    "02_Basic_Clean",
+    "03_Full_Clean",
+    "04_No_Stopwords",
+    "05_Balanced"
+  ],
+  "models": [
+    "LogisticRegression",
+    "RandomForest",
+    "XGBoost",
+    "LinearSVC"
+  ],
+  "data_dir": "data/07_Cleaned_Data",
+  "output_dir": "data/08_Modeling_Results/traditional_ml_hpo_deep",
+  "tuning_mode": "deep",
+  "vectorizer_config": {
+    "fast_grid": [
+      {
+        "max_features": 30000,
+        "ngram_range": [
+          1,
+          1
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "max_features": 50000,
+        "ngram_range": [
+          1,
+          1
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "max_features": 30000,
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "max_features": 50000,
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      }
+    ],
+    "full_extra": [
+      {
+        "max_features": 70000,
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 1,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "max_features": 50000,
+        "ngram_range": [
+          1,
+          3
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      }
+    ],
+    "deep_word_grid": [
+      {
+        "analyzer": "word",
+        "max_features": 10000,
+        "ngram_range": [
+          1,
+          1
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "analyzer": "word",
+        "max_features": 20000,
+        "ngram_range": [
+          1,
+          1
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "analyzer": "word",
+        "max_features": 30000,
+        "ngram_range": [
+          1,
+          1
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "analyzer": "word",
+        "max_features": 50000,
+        "ngram_range": [
+          1,
+          1
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "analyzer": "word",
+        "max_features": 30000,
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "analyzer": "word",
+        "max_features": 50000,
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "analyzer": "word",
+        "max_features": 70000,
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "analyzer": "word",
+        "max_features": 50000,
+        "ngram_range": [
+          1,
+          3
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "analyzer": "word",
+        "max_features": 50000,
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 1,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "analyzer": "word",
+        "max_features": 50000,
+        "ngram_range": [
+          1,
+          2
+        ],
+        "min_df": 3,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      }
+    ],
+    "deep_char_grid": [
+      {
+        "analyzer": "char_wb",
+        "max_features": 30000,
+        "ngram_range": [
+          3,
+          5
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "analyzer": "char_wb",
+        "max_features": 50000,
+        "ngram_range": [
+          3,
+          5
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      },
+      {
+        "analyzer": "char_wb",
+        "max_features": 50000,
+        "ngram_range": [
+          4,
+          6
+        ],
+        "min_df": 2,
+        "max_df": 0.95,
+        "sublinear_tf": true
+      }
+    ]
+  },
+  "model_candidate_caps": {
+    "LogisticRegression": 12,
+    "LinearSVC": 12,
+    "RandomForest": 6,
+    "XGBoost": 6
+  },
+  "model_candidate_caps_deep": {
+    "LogisticRegression": 40,
+    "LinearSVC": 45,
+    "RandomForest": 18,
+    "XGBoost": 18
+  },
+  "deep_model_grids": {
+    "LogisticRegression": [
+      {
+        "C": 0.05,
+        "solver": "lbfgs"
+      },
+      {
+        "C": 0.1,
+        "solver": "lbfgs"
+      },
+      {
+        "C": 0.3,
+        "solver": "lbfgs"
+      },
+      {
+        "C": 0.5,
+        "solver": "lbfgs"
+      },
+      {
+        "C": 1.0,
+        "solver": "lbfgs"
+      },
+      {
+        "C": 2.0,
+        "solver": "lbfgs"
+      },
+      {
+        "C": 5.0,
+        "solver": "lbfgs"
+      },
+      {
+        "C": 10.0,
+        "solver": "lbfgs"
+      },
+      {
+        "C": 1.0,
+        "solver": "saga"
+      },
+      {
+        "C": 2.0,
+        "solver": "saga"
+      }
+    ],
+    "LinearSVC": [
+      {
+        "C": 0.03,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 0.05,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 0.1,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 0.3,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 0.5,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 1.0,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 2.0,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 5.0,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 10.0,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 1.0,
+        "class_weight": null
+      },
+      {
+        "C": 2.0,
+        "class_weight": null
+      }
+    ],
+    "RandomForest": [
+      {
+        "n_estimators": 100,
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": 50,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": 100,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 2
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 100,
+        "max_features": "log2",
+        "min_samples_leaf": 1
+      }
+    ],
+    "XGBoost": [
+      {
+        "n_estimators": 100,
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.03,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 2.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 2.0,
+        "reg_alpha": 0.1
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 5,
+        "learning_rate": 0.03,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 2.0,
+        "reg_alpha": 0.1
+      }
+    ]
+  },
+  "created_at": "2026-06-12T18:08:17"
+}

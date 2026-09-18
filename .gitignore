@@ -1,30 +1,33 @@
-# 1. Toàn bộ file dữ liệu (Raw & Processed)
-*.csv
-*.json
-*.xlsx
-# Ngoại trừ file data/.gitkeep
-!data/.gitkeep
-
-# 2. Toàn bộ file trọng số mô hình AI (Model Weights)
-*.pt
-*.bin
-*.h5
-
-# 3. Bộ nhớ tạm của Python và Jupyter
+# Python cache
 __pycache__/
+*.py[cod]
 .ipynb_checkpoints/
 
-# 4. Môi trường ảo (Virtual Environment)
+# Virtual environments and local secrets
+.venv/
+.venv-dashboard/
+.venv_modeling/
 venv/
 env/
 .env
-.venv/
-.venv_modeling/
 
-# 5. Các file cấu hình hệ điều hành
+# OS/editor files
 .DS_Store
 Thumbs.db
 
-# 6. Thư mục dữ liệu & mô hình nội bộ
-report/
-08_Modeling_Results/
+# Submission archives generated locally
+DS107_Nhom12_Code.zip
+DS107_Model_Artifacts*.zip
+
+# Large model weights/checkpoints
+*.joblib
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.h5
+*.ckpt
+
+# Browser/profile artifacts
+chrome_profile*/
+playwright/.cache/

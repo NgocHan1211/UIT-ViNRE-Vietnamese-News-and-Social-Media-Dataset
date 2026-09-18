@@ -1,0 +1,7 @@
+model_name,status,mean_nsw_density,mean_nsw_count,total_samples
+PhoBERT,Đoán SAI (0),0.0012,0.0227,176
+PhoBERT,Đoán ĐÚNG (1),0.0006,0.0151,662
+mBERT,Đoán SAI (0),0.0008,0.0162,185
+mBERT,Đoán ĐÚNG (1),0.0007,0.0168,653
+XLM-RoBERTa,Đoán SAI (0),0.001,0.023,174
+XLM-RoBERTa,Đoán ĐÚNG (1),0.0006,0.0151,664

@@ -1,0 +1,6 @@
+{
+  "input_text": "Ngày 30/4/1975 là một mốc son của độc lập dân tộc, thống nhất đất nước và khát vọng hòa bình của Nhân dân Việt Nam. Từ ký ức thiêng liêng của mùa Xuân 1975, chúng ta càng nhận thức rõ hơn trách nhiệm của thế hệ hôm nay: biến niềm tự hào thành hành động, biến hòa bình thành phát triển, biến di sản của cha ông thành sức mạnh dựng xây một Việt Nam hùng cường, phồn vinh, văn minh, hạnh phúc. #baodbnd",
+  "predicted_topic_id": "T01",
+  "predicted_topic_label": "T01. POLITICS",
+  "note": "Use vectorizer.transform([text]) before model.predict."
+}

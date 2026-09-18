@@ -1,0 +1,16 @@
+{
+  "MODEL_PATHS_CONFIG": {
+    "traditional_registry": "08_Modeling_Results/traditional_ml_hpo_deep/model_zoo/model_registry.json",
+    "mBERT": "08_Modeling_Results/mbert_best_model_kb4",
+    "PhoBERT": "08_Modeling_Results/phobert_kb4_best_model",
+    "XLM-R": "08_Modeling_Results/xlmr_best_model_kb5"
+  },
+  "DASHBOARD_PARAMS": {
+    "min_reactions_threshold": 10,
+    "default_laplace_alpha": 5,
+    "controversy_warning_threshold": 0.40,
+    "sarcasm_warning_threshold": 30.0,
+    "raw_data_path": "../report/Master_Facebook_News_Posts_TeamCrawl_Labeled.csv",
+    "enriched_data_path": "Public_Response_Streamlit_Enriched.csv"
+  }
+}
